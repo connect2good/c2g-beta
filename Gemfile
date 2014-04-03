@@ -20,7 +20,6 @@ gem 'machinist', require: false
 gem 'mini_magick'
 gem 'pg'
 gem 'pg_search'
-gem 'rails_admin',  '~> 0.5.0'
 gem 'rolify'
 gem 'sidekiq'
 gem 'simple_form', '~> 3.0.0.rc'
