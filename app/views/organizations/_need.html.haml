@@ -1,0 +1,15 @@
+%tr{class: "delete_need_#{need.id}"}
+  %td
+    = simple_format word_wrap(need.description ) 
+  %td#activity_status
+    = form_for need do |f|
+      Active #{f.check_box :status, class: 'checkable', remote: true}
+     
+
+  %td
+    = need.created_at.strftime("%d %b. %Y") 
+  %td
+    = link_to 'Edit', need_path(need.id), method: :get, remote: true
+  %td
+    = link_to 'Delete', need, confirm: 'Are you sure?', method: :delete, remote: true
+  
