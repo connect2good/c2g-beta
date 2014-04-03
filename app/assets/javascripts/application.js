@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery.ui.all
 //= require jquery_ujs
-//= require jquery.remotipart
 //= require foundation
 //= require Chart
 
