@@ -1,0 +1,20 @@
+
+# Add
+
+  PATH=$PATH:.:./bin
+
+# to your ~/.zshrc
+# ( or .bash_profile if you don't use zsh )
+
+# just before final PATH export
+
+
+### Example ###
+
+# alias aps='open -a "Adobe Photoshop CC.app"'
+# alias ail='open -a "Adobe Illustrator.app"'
+
+#*** PATH=$PATH:.:./bin ****#
+
+# Customize to your needs...
+#export PATH=$PATH:/sw/bin:/sw/sbin:/Users/sonnyg/.rvm/gems/ruby-1.9.3-p429@rails3tutorial2nEd/bin:/Users/sonnyg/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/sonnyg/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/sonnyg/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:$HOME/bin
