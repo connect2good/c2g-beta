@@ -1,13 +1,9 @@
 = Connect 2 Good - Beta
 
-
 === Summary
-
 * Ruby 2.0.0p195 / Rails 4.0.2
-
-* Heroku
-
-
+* Technolgies: Heroku, Postgres, CircleCi, Mandrill
+* Gems: devise, pg_search
 
 === Setup
 
