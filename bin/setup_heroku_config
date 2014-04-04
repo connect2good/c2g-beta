@@ -1,0 +1,18 @@
+source .env
+
+servers=(beta staging production)
+
+for server in ${servers[*]}
+do
+  $server config:set  AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+  
+  $server config:set  AWS_S3_BUCKET=$AWS_S3_BUCKET
+  
+  $server config:set  AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+  
+  $server config:set  DEVISE_SECRET_KEY=$DEVISE_SECRET_KEY
+  
+  $server config:set  SMTP_USERNAME=$SMTP_USERNAME
+  
+  $server config:set  SMTP_PASSWORD=$SMTP_PASSWORD
+done
