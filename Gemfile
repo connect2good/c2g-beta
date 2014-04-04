@@ -28,6 +28,7 @@ gem 'mandrill-api'
 gem 'mail_form'
 gem 'unf'
 gem 'awesome_print'
+gem 'money-rails'
 
 
 group :production, :staging do
