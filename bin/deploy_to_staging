@@ -1,1 +1,2 @@
-exec heroku $@ --app c2g-marketplace-staging
+precompile_assets
+git push c2g staging

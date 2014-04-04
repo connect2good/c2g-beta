@@ -1,1 +1,2 @@
-exec heroku $@ --app c2g-marketplace-beta
+precompile_assets
+git push c2g-beta beta
