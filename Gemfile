@@ -42,7 +42,7 @@ group :assets do
   gem 'jquery-ui-rails'
   gem 'sass-rails',   '~> 4.0'
   gem 'uglifier', '>= 1.0.3'
-  gem 'foundation-rails'
+  gem 'foundation-rails', '~> 5.2.2.0'
 end
 
 group :development do

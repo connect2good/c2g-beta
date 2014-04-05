@@ -48,3 +48,5 @@ $(".close-reveal-modal").click(function(){
 	$(this).closest(".needsModal").foundation('reveal', 'close');
 });
 
+
+$(function(){ $(document).foundation(); });
