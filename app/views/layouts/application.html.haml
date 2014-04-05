@@ -18,7 +18,7 @@
 
     %title= content_for?(:title) ? yield(:title) : "Connect 2 Good"
     = favicon_link_tag '/favicon.ico'
-    = stylesheet_link_tag    "application"
+    = stylesheet_link_tag "main"
     = csrf_meta_tags
 
     :javascript
@@ -33,11 +33,18 @@
       ga('create', 'UA-48650109-1', 'connect2good.com');
 
       ga('send', 'pageview');
-  %body
-    .off-canvas-wrap
-      .inner-wrap
-        = render "layouts/header"
-        = yield
-    %a.exit-off-canvas
-    = javascript_include_tag "application"
-    = javascript_include_tag params[:controller]
+
+    .row
+      .columns.small-6
+        %p 1st col
+      .columns.small-6
+        %p 2nd col
+
+    // %body
+    //   .off-canvas-wrap
+    //     .inner-wrap
+    //       = render "layouts/header"
+    //       = yield
+    //   %a.exit-off-canvas
+    // = javascript_include_tag "application"
+    //= javascript_include_tag params[:controller]

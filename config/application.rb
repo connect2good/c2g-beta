@@ -38,7 +38,12 @@ module C2g
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
-    config.autoload_paths += %W(#{config.root}/lib foo)
+    # config.autoload_paths += %w(/vendor/assets/stylesheets/foundation)
+
+
+    # TODO: write this better later
+    # config.assets.paths.unshift Rails.root.join(
+        # "vendor", "assets", "stylesheets", "foundation").to_s
 
     # for background workers
     # config.autoload_paths += %W(#{config.root}/app/commands)
