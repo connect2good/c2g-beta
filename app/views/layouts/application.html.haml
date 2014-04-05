@@ -34,17 +34,9 @@
 
       ga('send', 'pageview');
 
-    .row
-      .columns.small-6
-        %p 1st col
-      .columns.small-6
-        %p 2nd col
-
-    // %body
-    //   .off-canvas-wrap
-    //     .inner-wrap
-    //       = render "layouts/header"
-    //       = yield
-    //   %a.exit-off-canvas
+    %body
+      = render "layouts/partials/header"
+      = yield
+      = yield :footer
     // = javascript_include_tag "application"
     //= javascript_include_tag params[:controller]
