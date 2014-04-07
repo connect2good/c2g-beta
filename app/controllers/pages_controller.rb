@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def home
+  end
+
   def index
   	# render layout: false
   end

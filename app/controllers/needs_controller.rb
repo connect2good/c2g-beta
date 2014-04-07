@@ -1,26 +1,29 @@
 class NeedsController < ApplicationController
 
-	def index
+  def search
+  end
+
+  def index
 		if params[:query].present? && params[:city].present?
       a = params[:query]
       b = params[:city]
-      c = a + " " + b 
+      c = a + " " + b
       @needs = Need.where(status: true).text_search(c).page(params[:page]).per_page(12)
     elsif params[:query].present?
 			@needs = Need.where(status: true).text_search(params[:query]).page(params[:page]).per_page(12)
     elsif params[:city].present?
-      @needs = Need.where(status: true).text_search(params[:city]).page(params[:page]).per_page(12)  
+      @needs = Need.where(status: true).text_search(params[:city]).page(params[:page]).per_page(12)
 		else
 			@needs = Need.where(status: true).page(params[:page]).per_page(12)
 		end
 		respond_to do |format|
 		    format.html
         format.js { redirect_to :back}
-		end	
+		end
 	end
 
 	def show
-		@need = Need.find(params[:id]) 
+		@need = Need.find(params[:id])
 	end
 
 	def need
@@ -36,7 +39,7 @@ class NeedsController < ApplicationController
         format.html { redirect_to :back }
         format.js { render layout: false }
       # else
-        # format.js 
+        # format.js
       # end
     end
 	end
@@ -50,7 +53,7 @@ class NeedsController < ApplicationController
     respond_to do |format|
       format.js { render :layout => false }
       format.html { redirect_to :back }
-    end  
+    end
 	end
 
 	def update
@@ -69,8 +72,8 @@ class NeedsController < ApplicationController
 		@need.destroy
 		respond_to do |format|
 		    format.html { redirect_to :back }
-        format.js { render layout: false} 
-		end	
+        format.js { render layout: false}
+		end
 	end
 
 	private

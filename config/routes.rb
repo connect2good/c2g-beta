@@ -1,4 +1,5 @@
 C2g::Application.routes.draw do
+  get "needs/search"
   get "donations/new"
   get "contact_form/new"
   get "contact_form/create"
