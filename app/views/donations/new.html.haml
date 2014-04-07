@@ -1,2 +1,39 @@
-%h1 Donations#new
-%p Find me in app/views/donations/new.html.haml
+%form{role: "form"}
+  %div
+%form{role: "form"}
+  %div   
+    %label Name on Card
+    %input#cc-name{autocomplete: "off", placeholder: "John Doe", type: "text"}/
+  %div
+    %label Card Number
+    %input#cc-number{autocomplete: "off", maxlength: "16", placeholder: "4111111111111111", type: "text"}/
+  %div
+    %label Expiration
+    %select
+      %option{value: "1"} 1
+      %option{value: "2"} 2
+      %option{value: "3"} 3
+      %option{value: "4"} 4
+      %option{value: "5"} 5
+      %option{value: "6"} 6
+      %option{value: "7"} 7
+      %option{value: "8"} 8
+      %option{value: "9"} 9
+      %option{value: "10"} 10
+      %option{value: "11"} 11
+      %option{value: "12"} 12
+      
+    / %input#cc-ex-month{autocomplete: "off", maxlength: "2", placeholder: "01", type: "month"}/
+    / %input#cc-ex-year{autocomplete: "off", maxlength: "4", placeholder: "2013", type: "text"}/
+    %select
+      %option{value: "2014"} 2014
+      %option{value: "2015"} 2015
+      %option{value: "2016"} 2016
+      %option{value: "2017"} 2017
+      %option{value: "2018"} 2018
+      %option{value: "2019"} 2019
+      %option{value: "2020"} 2020
+  %div
+    %label Security Code (CVV)
+    %input#ex-csc{autocomplete: "off", maxlength: "4", placeholder: "453", type: "text"}/
+  %button{type: "submit"} Buy
