@@ -1,6 +1,7 @@
 C2g::Application.routes.draw do
   get "goods/search"
   get "goods/index"
+  get "needs/search"
   get "donations/new"
   get "contact_form/new"
   get "contact_form/create"
