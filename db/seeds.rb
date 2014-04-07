@@ -11,7 +11,7 @@ def make_admin( name, email )
   user.admin = true
   user.save
 end
-
+Need.create(category: "toilet paper", organization_id: 1, description: "soft")
 users = [
   {
     name: "Joshua Vaughan",
@@ -36,7 +36,7 @@ users = [
   {
     name: "Jeff Conner",
     email: "drumwagon@gmail.com"
-  } 
+  }
 ]
 
 users.each do |user_info|
