@@ -29,6 +29,7 @@ gem 'mail_form'
 gem 'unf'
 gem 'awesome_print'
 gem 'money-rails'
+gem 'rolify'
 
 
 group :production, :staging do
