@@ -1,7 +1,8 @@
+%h3 Buy
+%p Good Description
+
 %form{role: "form"}
   %div
-%form{role: "form"}
-  %div   
     %label Name on Card
     %input#cc-name{autocomplete: "off", placeholder: "John Doe", type: "text"}/
   %div
@@ -22,9 +23,7 @@
       %option{value: "10"} 10
       %option{value: "11"} 11
       %option{value: "12"} 12
-      
-    / %input#cc-ex-month{autocomplete: "off", maxlength: "2", placeholder: "01", type: "month"}/
-    / %input#cc-ex-year{autocomplete: "off", maxlength: "4", placeholder: "2013", type: "text"}/
+
     %select
       %option{value: "2014"} 2014
       %option{value: "2015"} 2015
@@ -36,4 +35,6 @@
   %div
     %label Security Code (CVV)
     %input#ex-csc{autocomplete: "off", maxlength: "4", placeholder: "453", type: "text"}/
+    =image_tag "cvc.jpg"
   %button{type: "submit"} Buy
+
