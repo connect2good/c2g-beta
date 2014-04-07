@@ -3,18 +3,15 @@
 
 %form{role: "form"}
   %div
-    %label Name on Card
-    %input#cc-name{autocomplete: "off", placeholder: "John Doe", type: "text"}/
+    %input#cc-name{autocomplete: "off", placeholder: "Name on Card", type: "text"}/
   %div
-    %label Card Number
-    %input#cc-number{autocomplete: "off", maxlength: "16", placeholder: "4111111111111111", type: "text"}/
+    %input#cc-number{autocomplete: "off", maxlength: "16", placeholder: "Card Number", type: "text"}/
   %div
     %label Expiration
     = months
     = years
   %div
-    %label Security Code (CVV)
-    %input#ex-csc{autocomplete: "off", maxlength: "4", placeholder: "453", type: "text"}/
+    %input#ex-csc{autocomplete: "off", maxlength: "4", placeholder: "CVC", type: "text"}/
     =image_tag "cvc.jpg"
   %button{type: "submit"} Buy
 

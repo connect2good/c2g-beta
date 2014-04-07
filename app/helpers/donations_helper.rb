@@ -1,6 +1,7 @@
 module DonationsHelper
 	def months
 		content_tag :select do
+			concat content_tag :option, "Month"
 			months = []
 			for number in (1..12) do
 				months.push(number)
@@ -13,6 +14,7 @@ module DonationsHelper
 
 	def years
 		content_tag :select do
+			concat content_tag :option, "Year"
 			years = []
 			for number in (2014..2020) do
 				years.push(number)
