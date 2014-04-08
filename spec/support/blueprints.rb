@@ -1,40 +1,6 @@
 require 'machinist/active_record'
 require 'faker'
 
-Need.blueprint do
-  description do
-    "A book titled #{Faker::Company::bs}"
-  end
-end
-
-Offer.blueprint do
-  description { %w[books computers chairs].sample }
-  image do
-    Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-      'image/jpg'
-    )
-  end
-  status do
-    %w[pending accepted rejected].sample
-  end
-end
-
-Organization.blueprint do
-  description { Faker::Company::catch_phrase }
-  image do
-    Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-      'image/jpg'
-    )
-  end
-  name        { Faker::Company::name }
-  street      { '716 Congress Ave' }
-  city        { 'Austin' }
-  state       { 'TX' }
-  zip         { '78704' }
-end
-
 User.blueprint do
   email    { Faker::Internet::email }
   name     { Faker::Name::name }
@@ -43,3 +9,45 @@ User.blueprint do
     object.password
   end
 end
+
+TransactionUserRole.blueprint do
+
+end
+
+TransactionUserRole.blueprint(:seller) do
+  role_id { Role.seller.id }
+end
+
+TransactionUserRole.blueprint(:donor) do
+  role_id { Role.donor.id }
+end
+
+TransactionUserRole.blueprint(:buyer) do
+  role_id { Role.buyer.id }
+end
+
+TransactionUserRole.blueprint(:beneficiary) do
+  role_id { Role.beneficiary.id }
+end
+
+Transaction.blueprint do
+  status  { %w[pending accepted declined].sample }
+  closed_at do
+    (1 + rand(3)).to_i.days.ago
+  end
+end
+
+
+Good.blueprint do
+  description { Faker::Company::bs }
+end
+
+
+Need.blueprint do
+end
+
+Merchandise.blueprint do
+end
+
+
+

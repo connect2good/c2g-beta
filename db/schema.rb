@@ -11,75 +11,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206181456) do
+ActiveRecord::Schema.define(version: 20140408204531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "goods", force: true do |t|
+    t.string   "description"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "merchandises", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "needs", force: true do |t|
-    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "organization_id"
-    t.string   "category"
-    t.boolean  "status",          default: true
   end
 
-  create_table "offers", force: true do |t|
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transaction_user_roles", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "transaction_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transactions", force: true do |t|
+    t.integer  "good_id"
     t.string   "status"
-    t.integer  "donor_id"
-    t.integer  "organization_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "need_id"
-    t.string   "image"
-    t.text     "description"
-    t.string   "email"
-    t.string   "name"
-  end
-
-  add_index "offers", ["donor_id"], name: "index_offers_on_donor_id", using: :btree
-  add_index "offers", ["organization_id"], name: "index_offers_on_organization_id", using: :btree
-
-  create_table "organizations", force: true do |t|
-    t.string   "name"
-    t.integer  "owner_id"
-    t.text     "description"
-    t.string   "image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "email"
-    t.boolean  "status",      default: true
-    t.string   "street"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-  end
-
-  add_index "organizations", ["owner_id"], name: "index_organizations_on_owner_id", using: :btree
-
-  create_table "search_suggestions", force: true do |t|
-    t.string   "term"
-    t.integer  "popularity"
+    t.datetime "closed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
     t.string   "name"
-    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.boolean  "admin",                  default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

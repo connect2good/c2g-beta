@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  good_id: 1
+  status: MyString
+  closed_at: 2014-04-08 15:25:13
+
+two:
+  good_id: 1
+  status: MyString
+  closed_at: 2014-04-08 15:25:13
