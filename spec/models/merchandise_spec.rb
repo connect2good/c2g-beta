@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Need do
+describe Merchandise do
   pending "add some examples to (or delete) #{__FILE__}"
 end
