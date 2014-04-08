@@ -20,7 +20,6 @@ gem 'machinist', require: false
 gem 'mini_magick'
 gem 'pg'
 gem 'pg_search'
-gem 'rolify'
 gem 'sidekiq'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'will_paginate-foundation', '~> 5.3.3'
@@ -29,7 +28,7 @@ gem 'mail_form'
 gem 'unf'
 gem 'awesome_print'
 gem 'money-rails'
-gem 'rolify'
+
 
 
 group :production, :staging do
