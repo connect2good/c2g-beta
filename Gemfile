@@ -30,7 +30,6 @@ gem 'awesome_print'
 gem 'money-rails'
 
 
-
 group :production, :staging do
   gem 'rails_12factor'
 end
