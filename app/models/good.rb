@@ -1,4 +1,3 @@
 class Good < ActiveRecord::Base
-	def beneficiary
-  end
+  has_many :transactions
 end

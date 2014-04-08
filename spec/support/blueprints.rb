@@ -9,3 +9,45 @@ User.blueprint do
     object.password
   end
 end
+
+TransactionUserRole.blueprint do
+
+end
+
+TransactionUserRole.blueprint(:seller) do
+  role_id { Role.seller.id }
+end
+
+TransactionUserRole.blueprint(:donor) do
+  role_id { Role.donor.id }
+end
+
+TransactionUserRole.blueprint(:buyer) do
+  role_id { Role.buyer.id }
+end
+
+TransactionUserRole.blueprint(:beneficiary) do
+  role_id { Role.beneficiary.id }
+end
+
+Transaction.blueprint do
+  status  { %w[pending accepted declined].sample }
+  closed_at do
+    (1 + rand(3)).to_i.days.ago
+  end
+end
+
+
+Good.blueprint do
+  description { Faker::Company::bs }
+end
+
+
+Need.blueprint do
+end
+
+Merchandise.blueprint do
+end
+
+
+
