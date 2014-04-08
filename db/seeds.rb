@@ -7,7 +7,7 @@ end
 
 
 # Market Transactions
-Transaction.make!(5).each do |transaction|
+Transaction::Marketplace.make!(5).each do |transaction|
   # beneficiary
   tur = TransactionUserRole.make!(:beneficiary)
   tur.user = User.make!
@@ -35,7 +35,7 @@ end
 
 
 # Donation Transactions
-Transaction.make!(5).each do |transaction|
+Transaction::Donation.make!(5).each do |transaction|
   # beneficiary
   tur = TransactionUserRole.make!(:beneficiary)
   tur.user = User.make!

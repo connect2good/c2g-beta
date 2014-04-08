@@ -37,6 +37,12 @@ Transaction.blueprint do
   end
 end
 
+Transaction::Marketplace.blueprint do
+end
+
+Transaction::Donation.blueprint do
+end
+
 
 Good.blueprint do
   description { Faker::Company::bs }
