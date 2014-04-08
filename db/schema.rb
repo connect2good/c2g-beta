@@ -33,6 +33,28 @@ ActiveRecord::Schema.define(version: 20140408204531) do
     t.datetime "updated_at"
   end
 
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transaction_user_roles", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "transaction_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transactions", force: true do |t|
+    t.integer  "good_id"
+    t.string   "status"
+    t.datetime "closed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
