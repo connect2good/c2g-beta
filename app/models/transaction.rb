@@ -19,4 +19,11 @@ class Transaction < ActiveRecord::Base
     transaction_user_roles.find_by(role_id: Role.beneficiary.id)
   end
 
+  class Marketplace < Transaction
+
+  end
+
+  class Donation < Transaction
+
+  end
 end
