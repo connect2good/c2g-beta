@@ -1,2 +1,14 @@
-%h1 Merchandise#search
-%p Find me in app/views/merchandise/search.html.haml
+= row :page_message do
+  .columns.small-12
+    %p Search Merchandise
+
+= row :instructions do
+  .columns.small-12
+    %p.instructions-step Step 1. Find an item you would like to buy
+
+    = search_bar 'What would you like to buy?'
+        
+    .row
+      .columns.small-12
+        = button_tag :query, class: "btn" do
+          Search Merchandise

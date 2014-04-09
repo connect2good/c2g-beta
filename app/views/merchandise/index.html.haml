@@ -1,0 +1,22 @@
+= row :page_message do
+  .columns.small-12
+    %p Merchandise
+
+= row :card do
+  .columns.small-12
+    = row :good_title do
+      .columns.small-12
+        %p Merchandise title
+
+    = row :good_description do
+      .columns.small-12
+        %p Merchandise description
+
+    = row :good_beneficiary do
+      .columns.small-12
+        %p Merchandise beneficiary
+
+    .row
+      .columns.small-12
+        = button_tag :buy, class: "btn" do
+          Buy

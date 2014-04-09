@@ -1,0 +1,8 @@
+= row :page_message do
+  .columns.small-12
+    %p Post a Need
+
+= row :need_form do
+  = form_for(@need) do |f|
+    = f.label :description, "description"
+    = f.text_field :description

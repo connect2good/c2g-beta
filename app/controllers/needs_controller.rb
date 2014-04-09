@@ -9,6 +9,7 @@ class NeedsController < ApplicationController
   end
 
   def new
+    @need =Need.new
   end
 
   def edit

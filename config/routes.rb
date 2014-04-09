@@ -11,7 +11,7 @@ C2g::Application.routes.draw do
   get   "needs/donate"
   get   "needs/search"
   get   "needs/new"
-  patch "needs/edit"
+  get "needs/edit"
   get   "needs/destroy"
 
   get "donations/new"
