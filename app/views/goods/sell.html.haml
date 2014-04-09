@@ -1,2 +1,37 @@
-%h1 Goods#sell
-%p Find me in app/views/goods/sell.html.haml
+= row :page_message do
+  .columns.small-12
+    %p Sell
+
+= row :instructions do
+  %p.instructions-step Step 1. Describe your good
+
+= row :sell do
+  = form_tag needs_path, method: :get do
+    .row
+      .columns.small-10
+        = text_field_tag :query,
+          params[:query],
+          placeholder: "What would you like to sell?",
+          class: 'text-field text-field-search'
+
+
+= row :instructions do
+  %p.instructions-step Step 2. Include at least 1, and up to 3 pictures
+
+.row
+  .columns.small-12
+    = button_tag :query, class: "btn" do
+      Picture 1
+
+.row
+  .columns.small-12
+    = button_tag :query, class: "btn" do
+      Add a Picture
+
+= row :instructions do
+  %p.instructions-step Step 3. Submit the item you'd like to sell
+
+.row
+  .columns.small-12
+    = button_tag :query, class: "btn" do
+      Sell
