@@ -5,16 +5,16 @@
 
 = row do
   .columns.small-12
-    = link_to '#',
+    = link_to goods_sell_path,
       class: 'btn' do
-      sell
+      Sell
 
 = row :instructions do
   .columns.small-12
     %p.instructions-step Step 1. Find a need in our community that you may be able to fill.
 
     = search_bar 'What would you like to donate?'
-    
+
     .row
       .columns.small-12
         = button_tag :query, class: "btn" do
