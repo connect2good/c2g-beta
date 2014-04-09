@@ -1,4 +1,5 @@
 C2g::Application.routes.draw do
+  get "nonprofit/new"
   get "goods/donate"
   get "needs/index"
   get "goods/search"

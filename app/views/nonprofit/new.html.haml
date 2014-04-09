@@ -1,0 +1,23 @@
+= row :page_message do
+  .columns.small-12
+    %p Join
+
+= row :instructions do
+  %p.instructions-step Nonprofit email
+
+= row :email do
+  = form_tag do
+    .columns.small-12
+      =text_field_tag :input,
+        params[:input],
+        placeholder: "info@nonprofit.org",
+        class: "text-field"
+
+= row :card do
+  .columns.small-12
+    %h4 Nonprofit description
+
+.row
+  .columns.small-12
+    = button_tag :query, class: "btn" do
+      Join
