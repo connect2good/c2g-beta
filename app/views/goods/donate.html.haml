@@ -1,2 +1,47 @@
-%h1 Goods#donate
-%p Find me in app/views/goods/donate.html.haml
+= row :page_message do
+  .columns.small-12
+    %p Donate
+
+= row :card do
+  .columns.small-12
+    %h4 Organization 1
+    %p Good description
+
+= row :instructions do
+  %p.instructions-step describe your good
+
+= row :donate do
+  = form_tag needs_path, method: :get do
+    .row
+      .columns.small-10
+        = text_field_tag :query,
+          params[:query],
+          placeholder: "What would you like to donate?",
+          class: 'text-field text-field-search'
+
+= row :instructions do
+  %p.instructions-step include as many as 3 pictures
+
+= row :instructions do
+  %p.instructions-step include at least 1 picture
+
+  .row
+    .columns.small-12
+      = button_tag :query, class: "btn" do
+        Picture
+
+    .row
+      .columns.small-12
+        = button_tag :query, class: "btn" do
+          Add a Picture
+
+
+    .row
+    .columns.small-12
+      = button_tag :query, class: "btn" do
+        Donate
+
+
+
+
+
