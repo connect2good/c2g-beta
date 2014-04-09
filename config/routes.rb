@@ -1,4 +1,5 @@
 C2g::Application.routes.draw do
+  get "needs/index"
   get "goods/search"
   get "goods/index"
   get "goods/sell"
