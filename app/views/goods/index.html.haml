@@ -1,2 +1,11 @@
-%h1 Goods#index
-%p Find me in app/views/goods/index.html.haml
+= row :page_message do
+  .columns.small-12
+    %p Goods
+
+= row :card do
+  .columns.small-12
+    %p Good description
+    .row
+      .columns.small-12
+        = button_tag :buy, class: "btn" do
+          Buy
