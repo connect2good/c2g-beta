@@ -1,6 +1,9 @@
 button {
   background-color: #FDD68B;
-  border-radius: 0.5em;
+  &.btn-search {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 a.btn {

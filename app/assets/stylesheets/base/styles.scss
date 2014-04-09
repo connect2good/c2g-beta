@@ -9,6 +9,8 @@ body {
 
 button {
   color: #000;
+  border-color: #ccc;
+  border-radius: 0.5em;
 }
 
 a {
@@ -29,6 +31,9 @@ a {
 
 img { max-width: 100%; }
 
+input[type='text'] {
+  border-radius: 0.5em;
+}
 
 p, h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 0 0;
