@@ -5,10 +5,15 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
+@import "normalize";
+
 @import "foundation/components/global";
+
+@import "settings";
 
 @import
   "foundation/components/grid",
+  "foundation/components/buttons",
   "foundation/components/reveal",
   "foundation/components/visibility",
   "foundation/components/top-bar";
