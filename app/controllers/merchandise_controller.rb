@@ -1,11 +1,14 @@
-class NeedsController < ApplicationController
+class MerchandiseController < ApplicationController
   def search
   end
 
-  def index
+  def show
   end
 
-  def donate
+  def sell
+  end
+
+  def buy
   end
 
   def new
@@ -15,8 +18,5 @@ class NeedsController < ApplicationController
   end
 
   def destroy
-  end
-
-  def show
   end
 end

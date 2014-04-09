@@ -4,10 +4,4 @@ class GoodsController < ApplicationController
 
   def index
   end
-
-  def sell
-  end
-
-  def donate
-  end
 end
