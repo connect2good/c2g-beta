@@ -30,6 +30,7 @@ C2g::Application.routes.draw do
   get 'about', to: 'pages#about'
   get 'faq', to: 'pages#faq'
   get 'lets_connect_to_good', to: 'pages#lets_connect_to_good'
+  get 'join', to: 'pages#join'
   get 'offers/:offer_id/success', to: 'offers#success', as: 'success'
 
   get 'needs/:need_id/offers', to: 'offers#new', as: 'new_offer'
