@@ -36,7 +36,6 @@ end
 
 group :assets do
   gem 'coffee-rails', '~> 4.0'
-  gem 'font-awesome-rails'
   gem 'html5shiv-rails'
   gem 'jquery-ui-rails'
   gem 'sass-rails',   '~> 4.0'

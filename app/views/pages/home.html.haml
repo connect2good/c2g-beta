@@ -1,7 +1,36 @@
-= row do
-  .columns.small-12
-    %p Greeting
+= row :page_message do
+  %p Welcome to Connect 2 Good!
+  %p We make it easy for you to pass on used items to nonprofits that need them.
+
+= row :instructions do
+  %p.instructions-step Step 1. Find a need in our community that you may be able to fill.
+
+= row :search do
+  = form_tag needs_path, method: :get do
+    .row.collapse
+      .columns.small-10
+        = text_field_tag :query,
+          params[:query],
+          placeholder: "Search Needs",
+          class: 'search-field'
+      .columns.small-2
+        = button_tag :query, class: "btn postfix" do
+          %icon{ class: 'fa fa-search' }
 
 = row do
   .columns.small-12
-    = link_to 'Click Me', '#', class: 'btn'
+    = link_to '#',
+      class: 'btn' do
+      sell
+
+= row do
+  .columns.small-12
+    = link_to '#',
+      class: 'btn' do
+      shop
+
+= row do
+  .columns.small-12
+    = link_to '#',
+      class: 'btn' do
+      join
