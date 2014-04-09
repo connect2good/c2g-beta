@@ -9,26 +9,17 @@
 = row :cc_name do
   = form_tag do
     .columns.small-12
-      =text_field_tag :input,
-        params[:input],
-        placeholder: "Name on credit card",
-        class: "text-field"
+      = text_field 'Name on credit card'
 
 = row :cc_number do
   = form_tag do
     .columns.small-12
-      =text_field_tag :input,
-        params[:input],
-        placeholder: "Credit Card Number",
-        class: "text-field"
+      = text_field 'Credit card number'
 
 = row :cvc do
   = form_tag do
     .columns.small-3
-      =text_field_tag :input,
-        params[:input],
-        placeholder: "CVC",
-        class: "text-field"
+      = text_field 'CVC'
     .columns.small-5
       =row :card do
         %p CVC pic
@@ -36,15 +27,9 @@
 = row :expiration do
   = form_tag do
     .columns.small-6
-      =text_field_tag :input,
-        params[:input],
-        placeholder: "Month",
-        class: "text-field"
+      = text_field 'Month'
     .columns.small-6
-      =text_field_tag :input,
-        params[:input],
-        placeholder: "Year",
-        class: "text-field"
+      = text_field 'Year'
 
 = row do
   .columns.small-12

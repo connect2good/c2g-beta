@@ -16,6 +16,22 @@ module ApplicationHelper
 
   alias_method :m, :l
 
+  def text_field( placeholder_text='', opts={} )
+    render partial: 'layouts/partials/text_field',
+      locals: {
+        _opts: normalize_opts('text-field', opts),
+        text_placeholder: placeholder_text
+      }     
+  end
+
+  def search_bar( placeholder_text='', opts={} )
+    render partial: 'layouts/partials/search_bar',
+      locals: {
+        _opts: normalize_opts('', opts),
+        text_placeholder: placeholder_text
+      }     
+  end
+
   def link_btn( url='#', opts={}, &block )
     partial 'partials/link_btn',
       locals: {

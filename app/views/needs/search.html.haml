@@ -3,19 +3,11 @@
     %p Search Needs
 
 = row :instructions do
-  %p.instructions-step Step 1. Find a need in our community that you may be able to fill.
+  .columns.small-12
+    %p.instructions-step Step 1. Find a need in our community that you may be able to fill.
 
-= row :search do
-  = form_tag needs_path, method: :get do
-    .row.collapse
-      .columns.small-10
-        = text_field_tag :query,
-          params[:query],
-          placeholder: "What would you like to donate?",
-          class: 'text-field text-field-search'
-      .columns.small-2
-        = button_tag :query, class: "btn btn-search postfix" do
-          %icon{ class: 'fa fa-search' }
+    = search_bar 'What would you like to donate?'
+        
     .row
       .columns.small-12
         = button_tag :query, class: "btn" do

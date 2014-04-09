@@ -2,22 +2,24 @@
   .columns.small-12
     %p Donate
 
-= row :card do
+= row :card,
+  class: 'card-good' do
   .columns.small-12
-    %h4 Organization 1
-    %p Good description
+    = row :organization_name do
+      .columns.small-12
+        %h1 This really doesn't make sense
+        %h4 Organization 1
+
+    = row :need_description do
+      .columns.small-12
+        %p Good description
 
 = row :instructions do
   %p.instructions-step describe your good
 
 = row :donate do
-  = form_tag needs_path, method: :get do
-    .row
-      .columns.small-10
-        = text_field_tag :query,
-          params[:query],
-          placeholder: "What would you like to donate?",
-          class: 'text-field text-field-search'
+  .columns.small-12
+    = text_field 'What would you like to donate?'
 
 = row :instructions do
   %p.instructions-step include as many as 3 pictures

@@ -9,11 +9,7 @@
   = form_tag needs_path, method: :get do
     .row
       .columns.small-10
-        = text_field_tag :query,
-          params[:query],
-          placeholder: "What would you like to sell?",
-          class: 'text-field text-field-search'
-
+        = text_field 'What would you like to sell?'
 
 = row :instructions do
   %p.instructions-step Step 2. Include at least 1, and up to 3 pictures

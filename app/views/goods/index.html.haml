@@ -4,7 +4,18 @@
 
 = row :card do
   .columns.small-12
-    %p Good description
+    = row :good_title do
+      .columns.small-12
+        %p Good title
+
+    = row :good_description do
+      .columns.small-12
+        %p Good description
+
+    = row :good_beneficiary do
+      .columns.small-12
+        %p Good beneficiary
+
     .row
       .columns.small-12
         = button_tag :buy, class: "btn" do

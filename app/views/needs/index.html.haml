@@ -2,11 +2,18 @@
   .columns.small-12
     %p Needs
 
-= row :card do
+= row :card,
+  class: 'card-need' do
   .columns.small-12
-    %h4 Organization 1
-    %p Need description
-    .row
+    = row :organization_name do
       .columns.small-12
-        = button_tag :donate, class: "btn" do
+        %h4 Organization 1
+
+    = row :need_description do
+      .columns.small-12
+        %p Need description
+        
+    = row do
+      .columns.small-12
+        = link_to '#', class: "btn" do
           Donate
