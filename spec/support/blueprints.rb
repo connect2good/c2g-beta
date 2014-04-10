@@ -45,6 +45,7 @@ end
 
 
 Good.blueprint do
+  title       { Faker::Company::bs }
   description { Faker::Company::bs }
 end
 
