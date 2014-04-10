@@ -35,6 +35,9 @@
       ga('send', 'pageview');
 
     %body
+      %p.notice= notice
+      %p.alert= alert
+
       = render "layouts/partials/header"
       = yield
       = render "layouts/partials/footer"
