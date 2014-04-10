@@ -17,6 +17,7 @@ class NeedsController < ApplicationController
   end
 
   def edit
+    @need = Need.find(params[:id])
   end
 
   def destroy
