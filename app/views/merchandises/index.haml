@@ -1,7 +1,7 @@
 - @merchandises.each do |item|
   =row :card do
-    %h3== title #{item.title}
-    %p== description #{item.description}
+    %h3== #{item.title}
+    %p== #{item.description}
     =row :buttons do
       =link_to '#', class: "btn" do
         Contact Seller
