@@ -52,6 +52,7 @@ group :development do
   gem 'html2haml'
   gem 'quiet_assets'
   gem 'terminal-notifier-guard', require: RUBY_PLATFORM.include?('darwin') && 'terminal-notifier-guard'
+  gem 'pry'
 end
 
 group :development, :test do

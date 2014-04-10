@@ -4,11 +4,13 @@
     %th Beneficiary
     %th Buyer
     %th Seller
+    %th Donor
     %th Good ID
-  %tr
-    -@transactions.each do |t|
-      %td= t.beneficiary.user.name
-      %td= t.buyer.user.name
-      %td= t.seller
+  -@transactions.each do |t|
+    %tr
+      %td= t.role_name("beneficiary")
+      %td= t.role_name("buyer")
+      %td= t.role_name("seller")
+      %td= t.role_name("donor")
       %td= t.good_id
       %td= t.status

@@ -37,10 +37,10 @@ Transaction.blueprint do
   end
 end
 
-Transaction::Marketplace.blueprint do
+Marketplace.blueprint do
 end
 
-Transaction::Donation.blueprint do
+Donation.blueprint do
 end
 
 
