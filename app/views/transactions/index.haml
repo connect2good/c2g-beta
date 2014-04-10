@@ -1,0 +1,14 @@
+%h2 Transactions
+%table
+  %tr
+    %th Beneficiary
+    %th Buyer
+    %th Seller
+    %th Good ID
+  %tr
+    -@transactions.each do |t|
+      %td= t.beneficiary.user.name
+      %td= t.buyer.user.name
+      %td= t.seller
+      %td= t.good_id
+      %td= t.status
