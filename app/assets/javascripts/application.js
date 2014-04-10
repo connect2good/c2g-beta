@@ -14,7 +14,7 @@
 //= require jquery.ui.all
 //= require jquery_ujs
 //= require foundation
-//= require Chart
+//  require Chart
 
 $(document).foundation();
 
