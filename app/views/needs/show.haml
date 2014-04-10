@@ -1,2 +1,5 @@
-= @need.title
-= @need.description
+=row :card do
+  %h3= @need.title
+  %p= @need.description
+  =link_to "#", class:"btn" do
+    Donate

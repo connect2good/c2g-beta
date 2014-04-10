@@ -13,6 +13,7 @@ C2g::Application.routes.draw do
   resources :organization
   resources :pages
   resources :people
+  get "join", to: "pages#join"
 
   # get "merchandise/search"
   # get "merchandise/index"

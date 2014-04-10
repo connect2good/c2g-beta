@@ -5,9 +5,9 @@
 = row :user_type do
   .columns.small-6.text-center
     %h3 Are you an organization?
-    =link_to '#', class: "btn" do
-      Organization
+    =link_to new_user_registration_path, class: "btn" do
+      Organization Sign Up
   .columns.small-6.text-center
     %h3 Are you an individual?
-    =link_to '#', class: "btn" do
-      Individual
+    =link_to new_user_registration_path, class: "btn" do
+      Individual Sign Up

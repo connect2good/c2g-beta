@@ -1,5 +1,12 @@
+=row :page_message do
+  %h2 Current Needs
+
+=row :instructions do
+  %h4 Donate to one of the needs below
+
 - @needs.each do |need|
-  = "Title: #{need.title}"
-  %br
-  = "Description: #{need.description}"
-  %br
+  =row :card do
+    %h3= need.title
+    %p= need.description
+    =link_to "#", class:"btn" do
+      Donate
