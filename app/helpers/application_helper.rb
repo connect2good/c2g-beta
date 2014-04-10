@@ -16,12 +16,12 @@ module ApplicationHelper
 
   alias_method :m, :l
 
-  def text_field( placeholder_text='', opts={} )
-    render partial: 'layouts/partials/text_field',
+  def txt_field( placeholder_text='', opts={} )
+    render partial: 'layouts/partials/txt_field',
       locals: {
-        _opts: normalize_opts('text-field', opts),
+        _opts: normalize_opts('txt-field', opts),
         text_placeholder: placeholder_text
-      }     
+      }
   end
 
   def search_bar( placeholder_text='', opts={} )
@@ -29,7 +29,7 @@ module ApplicationHelper
       locals: {
         _opts: normalize_opts('', opts),
         text_placeholder: placeholder_text
-      }     
+      }
   end
 
   def link_btn( url='#', opts={}, &block )
@@ -38,7 +38,7 @@ module ApplicationHelper
         _url:     url,
         _opts:    normalize_opts('btn link-btn', opts),
         _content: capture_haml { yield }
-      }    
+      }
   end
 
   def row( name='', opts={}, &block )
