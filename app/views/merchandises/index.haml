@@ -1,3 +1,9 @@
-- @merchandise.each do |item|
-  %p== title #{item.title}
-  %p== description #{item.description}
+- @merchandises.each do |item|
+  =row :card do
+    %h3== title #{item.title}
+    %p== description #{item.description}
+    =row :buttons do
+      =link_to '#', class: "btn" do
+        Contact Seller
+      =link_to '#', class: "btn" do
+        Buy
