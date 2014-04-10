@@ -15,9 +15,18 @@
 
     -# Right Nav Section
     %ul.right
-      %li
-        =link_to 'Sign In', new_user_session_path
-      %li
-        =link_to 'Sign out', destroy_user_session_path, method: :delete
-      %li
-        =link_to 'Link 2', '#'
+      -if user_signed_in?
+        %li
+          = link_to 'My Account', '#'
+        %li
+          = link_to 'Edit Profile', edit_user_registration_path
+        %li
+          = link_to 'Sign out', destroy_user_session_path, method: :delete
+
+      -else
+        %li
+          =link_to 'Sign In', new_user_session_path
+        %li
+          =link_to 'Sign out', destroy_user_session_path, method: :delete
+    
+
