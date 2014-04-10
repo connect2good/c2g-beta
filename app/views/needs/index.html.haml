@@ -1,19 +1,5 @@
-= row :page_message do
-  .columns.small-12
-    %p Needs
-
-= row :card,
-  class: 'card-need' do
-  .columns.small-12
-    = row :organization_name do
-      .columns.small-12
-        %h4 Organization 1
-
-    = row :need_description do
-      .columns.small-12
-        %p Need description
-        
-    = row do
-      .columns.small-12
-        = link_to '#', class: "btn" do
-          Donate
+- @need.each do |need|
+  = "Title: #{need.title}"
+  %br
+  = "Description: #{need.description}"
+  %br

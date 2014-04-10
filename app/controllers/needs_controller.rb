@@ -1,15 +1,8 @@
 class NeedsController < ApplicationController
-  def search
-  end
-
-  def index
-  end
-
-  def donate
-  end
-
   def new
-    @need =Need.new
+  end
+
+  def create
   end
 
   def edit
@@ -18,6 +11,7 @@ class NeedsController < ApplicationController
   def destroy
   end
 
-  def show
+  def index
+    @need = Need.all
   end
 end

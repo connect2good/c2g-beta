@@ -1,4 +1,9 @@
 C2g::Application.routes.draw do
+  get "needs/new"
+  get "needs/create"
+  get "needs/edit"
+  get "needs/destroy"
+  get "needs/index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
