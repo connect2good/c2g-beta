@@ -29,6 +29,6 @@ class MerchandisesController < ApplicationController
 
 private
   def merchandise_params
-    params.require(:merchandise).permit(:title, :description)
+    params.require(:merchandise).permit(:title, :description, :price, :agree, :pic1, :pic2, :pic3)
   end
 end

@@ -14,7 +14,7 @@
 //= require jquery.ui.all
 //= require jquery_ujs
 //= require foundation
-//  require Chart
+
 
 $(document).foundation();
 
@@ -35,7 +35,7 @@ $(".close-reveal-modal").click(function(){
 });
 
 
-$('.checkable').on('change', 
+$('.checkable').on('change',
 function() {
     $(this).parents('form:first').submit();
 });
