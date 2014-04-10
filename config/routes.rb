@@ -8,7 +8,7 @@ C2g::Application.routes.draw do
   root 'pages#home'
 
   resources :goods
-  resources :merchandise
+  resources :merchandises
   resources :needs
   resources :organization
   resources :pages
