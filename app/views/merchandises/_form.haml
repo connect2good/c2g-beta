@@ -3,11 +3,15 @@
   = f.text_field :title
   = f.label :description
   = f.text_field :description
+  = f.label "Price"
+  = f.text_field :price
   = f.label "Upload photo"
   = f.file_field :pic1
   = f.label "Upload photo"
   = f.file_field :pic2
   = f.label "Upload photo"
   = f.file_field :pic3
+  = f.check_box :agree
   = f.label "I agree to complete this transaction through the Connect 2 Good Marketplace."
+  %br
   = f.submit
