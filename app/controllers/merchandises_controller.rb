@@ -21,6 +21,9 @@ class MerchandisesController < ApplicationController
   end
 
   def destroy
+    @merchandise = Merchandise.find(params[:id])
+    @merchandise.destroy
+    redirect_to merchandises_path
   end
 
   def index

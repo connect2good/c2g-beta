@@ -3,4 +3,6 @@ class PagesController < ApplicationController
   end
   def join
   end
+  def about
+  end
 end
