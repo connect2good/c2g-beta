@@ -21,6 +21,9 @@ class NeedsController < ApplicationController
   end
 
   def destroy
+    @need = Need.find(params[:id])
+    @need.destroy
+    redirect_to needs_path
   end
 
   def index

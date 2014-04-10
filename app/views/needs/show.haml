@@ -3,3 +3,4 @@
   %p= @need.description
   =link_to "#", class:"btn" do
     Donate
+  =link_to 'Delete Need', @need, :method => :delete, :data => { :confirm => 'Are you sure?' }
