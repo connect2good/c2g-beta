@@ -1,6 +1,8 @@
 class Transaction < ActiveRecord::Base
   has_many :transaction_user_roles
   has_many :users, through: :transaction_user_roles
+  has_many :organizations, through: :transaction_user_roles
+  has_many :individuals, through: :transaction_user_roles
   belongs_to :good
 
   def role(type)

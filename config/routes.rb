@@ -19,6 +19,8 @@ C2g::Application.routes.draw do
   # first created -> highest priority.
 
   devise_for :users
+  devise_for :organizations, controllers: { sessions: "organizations/sessions" }
+  devise_for :individuals, controllers: { sessions: "individuals/sessions" }
 
   root 'pages#home'
 
