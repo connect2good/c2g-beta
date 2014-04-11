@@ -3,11 +3,20 @@ require 'faker'
 
 User.blueprint do
   email    { Faker::Internet::email }
-  name     { Faker::Name::name }
   password { 'test1234' }
   password_confirmation do
     object.password
   end
+end
+
+Organization.blueprint do
+  name { Faker::Company.name }
+  type { "Organization" }
+end
+
+Individual.blueprint do
+  name { Faker::Name.name }
+  type { "Individual" }
 end
 
 TransactionUserRole.blueprint do
