@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # specify ruby version so heroku doesn't
 # nag you during a build
-ruby '2.0.0'
+ruby '2.1.1'
 
 gem 'rails', '~> 4.0.4'
 
