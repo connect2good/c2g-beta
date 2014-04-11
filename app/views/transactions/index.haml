@@ -8,9 +8,9 @@
     %th Good ID
   -@transactions.each do |t|
     %tr
-      %td= t.role_name("beneficiary")
-      %td= t.role_name("buyer")
-      %td= t.role_name("seller")
-      %td= t.role_name("donor")
+      %td= t.user_name("beneficiary")
+      %td= t.user_name("buyer")
+      %td= t.user_name("seller")
+      %td= t.user_name("donor")
       %td= t.good_id
       %td= t.status

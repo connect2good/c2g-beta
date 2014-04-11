@@ -1,6 +1,8 @@
 class Transaction < ActiveRecord::Base
   has_many :transaction_user_roles
   has_many :users, through: :transaction_user_roles
+  has_many :organizations, through: :transaction_user_roles
+  has_many :individuals, through: :transaction_user_roles
   belongs_to :good
 
   def role(type)
@@ -13,11 +15,13 @@ class Transaction < ActiveRecord::Base
       role_id = Role.donor.id if type == "donor"
     when "beneficiary"
       role_id = Role.beneficiary.id if type == "beneficiary"
+    else
+      # fall back case
     end
     transaction_user_roles.find_by(role_id: role_id)
   end
 
-  def role_name(type)
+  def user_name(type)
     case type
     when "seller"
       seller = transaction_user_roles.find_by(role_id: Role.seller.id)

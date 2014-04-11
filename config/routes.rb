@@ -3,6 +3,8 @@ C2g::Application.routes.draw do
   # first created -> highest priority.
 
   devise_for :users
+  devise_for :organizations
+  devise_for :individuals
 
   root 'pages#home'
 
@@ -12,18 +14,18 @@ C2g::Application.routes.draw do
     resources :marketplaces
   end
 
-  resources :marketplaces
-
   resources :needs do
     resources :donations
   end
 
   resources :donations
-  resources :organization
+  resources :needs
+  resources :organizations
   resources :pages
   resources :people
   resources :transactions
   get "join", to: "pages#join"
+  get "about", to: "pages#about"
 
   # get "merchandise/search"
   # get "merchandise/index"

@@ -1,2 +1,9 @@
-= @merchandise.title
-= @merchandise.description
+=row :card do
+  %h3= @merchandise.title
+  %p= @merchandise.description
+  =row :buttons do
+    =link_to '#', class: "btn" do
+      Contact Seller
+    =link_to '#', class: "btn" do
+      Buy
+    =link_to 'Delete Merchandise', @merchandise, :method => :delete, :data => { :confirm => 'Are you sure?' }

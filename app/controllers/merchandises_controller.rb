@@ -1,4 +1,6 @@
 class MerchandisesController < ApplicationController
+  before_action :load_merchandise, only: [:show, :edit, :destroy]
+
   def new
     @merchandise = Merchandise.new
   end
@@ -13,14 +15,17 @@ class MerchandisesController < ApplicationController
   end
 
   def show
-    @merchandise = Merchandise.find(params[:id])
+    # before_action :load_merchandise
   end
 
   def edit
-    @merchandise = Merchandise.find(params[:id])
+    # before_action :load_merchandise
   end
 
   def destroy
+    # before_action :load_merchandise
+    @merchandise.destroy
+    redirect_to merchandises_path
   end
 
   def index
@@ -28,7 +33,21 @@ class MerchandisesController < ApplicationController
   end
 
 private
+
+  def load_merchandise
+    @merchandise = Merchandise.find(params[:id])
+  end
+
+
   def merchandise_params
-    params.require(:merchandise).permit(:title, :description)
+    params.require(:merchandise).permit(
+      :title,
+      :description,
+      :price,
+      :agree,
+      :pic1,
+      :pic2,
+      :pic3,
+    )
   end
 end
