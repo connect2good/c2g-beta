@@ -10,13 +10,19 @@ User.blueprint do
 end
 
 Organization.blueprint do
-  name { Faker::Company.name }
-  type { "Organization" }
+  email    { Faker::Internet::email }
+  password { 'test1234' }
+  password_confirmation do
+    object.password
+  end
 end
 
 Individual.blueprint do
-  name { Faker::Name.name }
-  type { "Individual" }
+  email    { Faker::Internet::email }
+  password { 'test1234' }
+  password_confirmation do
+    object.password
+  end
 end
 
 TransactionUserRole.blueprint do
@@ -60,9 +66,13 @@ end
 
 
 Need.blueprint do
+  title       { Faker::Company::bs }
+  description { Faker::Company::bs }
 end
 
 Merchandise.blueprint do
+  title       { Faker::Company::bs }
+  description { Faker::Company::bs }
 end
 
 

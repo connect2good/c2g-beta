@@ -1,3 +1,3 @@
-class Merchandise < Good
-
+class Merchandise < ActiveRecord::Base
+  has_many :transactions
 end
