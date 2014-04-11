@@ -32,6 +32,7 @@ C2g::Application.routes.draw do
   resources :people
   resources :transactions
   get "join", to: "pages#join"
+  get "about", to: "pages#about"
 
   # get "merchandise/search"
   # get "merchandise/index"
