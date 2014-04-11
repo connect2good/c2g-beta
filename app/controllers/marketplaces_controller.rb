@@ -1,5 +1,6 @@
 class MarketplacesController < ApplicationController
   def index
+    @marketplaces = Marketplace.all
   end
 
   def create

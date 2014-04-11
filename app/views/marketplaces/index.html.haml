@@ -1,2 +1,13 @@
-%h1 Marketplaces#index
-%p Find me in app/views/marketplaces/index.html.haml
+%h2 Display all marketplace transactions
+%table 
+  %tr
+    %th ID
+    %th Good ID
+    %th Status
+  - @marketplaces.each do |item|
+    %tr
+      / # %td== title #{item.title}
+      %td= item.id
+      / # %td== description #{item.description}
+      %td= item.good_id
+      %td= item.status

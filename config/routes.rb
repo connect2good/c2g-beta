@@ -10,6 +10,7 @@ C2g::Application.routes.draw do
   resources :merchandises do
     resources :marketplaces
   end
+  resources :marketplaces
   resources :needs do
     resources :donations
   end
