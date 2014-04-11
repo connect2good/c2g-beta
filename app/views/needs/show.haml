@@ -1,6 +1,6 @@
 =row :card do
   %h3= @need.title
   %p= @need.description
-  =link_to "#", class:"btn" do
+  =link_to new_need_donation_path(@need), class:"btn" do
     Donate
   =link_to 'Delete Need', @need, :method => :delete, :data => { :confirm => 'Are you sure?' }

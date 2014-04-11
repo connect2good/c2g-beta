@@ -21,7 +21,7 @@ class NeedsController < ApplicationController
   end
 
   def destroy
-    @need = Need.find(params[:id])
+    @need = Need.find(params[:need_id])
     @need.destroy
     redirect_to needs_path
   end

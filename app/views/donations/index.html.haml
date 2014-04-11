@@ -1,2 +1,13 @@
-%h1 Donations#index
-%p Find me in app/views/donations/index.html.haml
+%h2 Display all dination transactions
+%table 
+  %tr
+    %th ID
+    %th Good ID
+    %th Status
+  - @donations.each do |item|
+    %tr
+      / # %td== title #{item.title}
+      %td= item.id
+      / # %td== description #{item.description}
+      %td= item.good_id
+      %td= item.status

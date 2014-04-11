@@ -7,13 +7,18 @@ C2g::Application.routes.draw do
   root 'pages#home'
 
   resources :goods
+  
   resources :merchandises do
     resources :marketplaces
   end
+
   resources :marketplaces
+
   resources :needs do
     resources :donations
   end
+
+  resources :donations
   resources :organization
   resources :pages
   resources :people
