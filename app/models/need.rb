@@ -1,9 +1,5 @@
 class Need < ActiveRecord::Base
   belongs_to :organization
-  has_many :transactions
+  has_many :donations
 
-
-  
-  def donor
-  end
 end

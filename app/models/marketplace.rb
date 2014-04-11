@@ -1,3 +1,0 @@
-class Marketplace < Transaction
-
-end

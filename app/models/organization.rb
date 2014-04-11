@@ -3,5 +3,10 @@ class Organization < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
   has_many :needs
+  
+  has_many :benefits,
+    class_name: 'Merchandise',
+    foreign_key: 'organization_id'
 end

@@ -1,15 +1,9 @@
 require 'machinist/active_record'
 require 'faker'
 
-User.blueprint do
-  email    { Faker::Internet::email }
-  password { 'test1234' }
-  password_confirmation do
-    object.password
-  end
-end
 
 Organization.blueprint do
+  name     { Faker::Company.name }
   email    { Faker::Internet::email }
   password { 'test1234' }
   password_confirmation do
@@ -18,6 +12,7 @@ Organization.blueprint do
 end
 
 Individual.blueprint do
+  name     { Faker::Name.name }
   email    { Faker::Internet::email }
   password { 'test1234' }
   password_confirmation do
@@ -26,7 +21,6 @@ Individual.blueprint do
 end
 
 TransactionUserRole.blueprint do
-
 end
 
 TransactionUserRole.blueprint(:seller) do
@@ -45,25 +39,19 @@ TransactionUserRole.blueprint(:beneficiary) do
   role_id { Role.beneficiary.id }
 end
 
-Transaction.blueprint do
+Purchase.blueprint do
   status  { %w[pending accepted declined].sample }
   closed_at do
     (1 + rand(3)).to_i.days.ago
   end
 end
 
-Marketplace.blueprint do
-end
-
 Donation.blueprint do
+  status  { %w[pending accepted declined].sample }
+  closed_at do
+    (1 + rand(3)).to_i.days.ago
+  end
 end
-
-
-Good.blueprint do
-  title       { Faker::Company::bs }
-  description { Faker::Company::bs }
-end
-
 
 Need.blueprint do
   title       { Faker::Company::bs }
