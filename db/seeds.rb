@@ -5,6 +5,11 @@ require 'faker'
   Role.create name: role
 end
 
+Organization.make!(5)
+
+Individual.make!(5)
+
+
 
 # Market Transactions
 Marketplace.make!(5).each do |transaction|
