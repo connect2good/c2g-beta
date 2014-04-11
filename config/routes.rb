@@ -1,4 +1,19 @@
 C2g::Application.routes.draw do
+  get "marketplaces/index"
+  get "marketplaces/create"
+  get "marketplaces/new"
+  get "marketplaces/edit"
+  get "marketplaces/destroy"
+  get "donation/index"
+  get "donation/create"
+  get "donation/new"
+  get "donation/edit"
+  get "donation/destroy"
+  get "marketplace/index"
+  get "marketplace/create"
+  get "marketplace/new"
+  get "marketplace/edit"
+  get "marketplace/destroy"
   resources :roles
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -8,7 +23,9 @@ C2g::Application.routes.draw do
   root 'pages#home'
 
   resources :goods
-  resources :merchandises
+  resources :merchandises do
+    resources :marketplaces
+  end
   resources :needs
   resources :organizations
   resources :pages

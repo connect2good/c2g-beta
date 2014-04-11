@@ -10,6 +10,7 @@ class TransactionsController < ApplicationController
   end
 
   def show
+    @transaction = Transaction.find(params[:id])
   end
 
 
