@@ -15,18 +15,28 @@
 
     -# Right Nav Section
     %ul.right
-      -if user_signed_in?
+      -if organization_signed_in?
         %li
           = link_to 'My Account', '#'
         %li
-          = link_to 'Edit Profile', edit_user_registration_path
+          = link_to 'Edit Profile', edit_organization_registration_path
         %li
-          = link_to 'Sign out', destroy_user_session_path, method: :delete
+          = link_to 'Sign out', destroy_organization_session_path, method: :delete
+
+      -elsif individual_signed_in?
+        %li
+          = link_to 'My Account', '#'
+        %li
+          = link_to 'Edit Profile', edit_individual_registration_path
+        %li
+          = link_to 'Sign out', destroy_individual_session_path, method: :delete
 
       -else
         %li
-          =link_to 'Sign In', new_user_session_path
+          =link_to 'Organization Sign In', new_organization_session_path
         %li
-          =link_to 'Sign up', new_user_registration_path
+          =link_to 'Individual Sign In', new_individual_session_path
+        %li
+          =link_to 'Sign up', join_path
 
 
