@@ -1,0 +1,14 @@
+%p Transaction
+%table
+  %tr
+    %th ID
+    %th Good ID
+    %th Status
+    %th Type
+    %th Beneficiary
+  %tr
+    %td= @transaction.id
+    %td= @transaction.good_id
+    %td= @transaction.status
+    %td= @transaction.type
+    %td= @transaction.role_name("beneficiary")
