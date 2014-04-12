@@ -62,7 +62,7 @@ Merchandise.blueprint do
   title       { Faker::Company::bs }
   description { Faker::Company::bs }
   agree       { true }
-  pic1        { "pic" }
+  pic1        {  }
 end
 
 
