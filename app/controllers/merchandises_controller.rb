@@ -1,5 +1,5 @@
 class MerchandisesController < ApplicationController
-  before_action :load_merchandise, only: [:show, :edit, :destroy]
+  before_action :load_merchandise, only: [:show, :edit, :destroy, :update]
 
   def new
     @merchandise = Merchandise.new
@@ -20,6 +20,12 @@ class MerchandisesController < ApplicationController
 
   def edit
     # before_action :load_merchandise
+  end
+
+  def update
+    # before_action :load_merchandise
+    @merchandise.update_attributes(merchandise_params)
+    redirect_to merchandises_path
   end
 
   def destroy

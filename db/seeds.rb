@@ -73,6 +73,6 @@ Donation.make!(5).each do |donation|
   tur.role = Role.buyer
   tur.save!
 
-  donation.need_id =  Need.make!.id
+  # donation.need_id =  Need.make!.id
   donation.save!
 end
