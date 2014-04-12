@@ -14,5 +14,9 @@ class Merchandise < ActiveRecord::Base
   validates :title, presence: :true
   validates :description, presence: :true
   validates :agree, presence: :true
+  validates :pic1, presence: :true
 
+  mount_uploader :pic1, ImageUploader
+  mount_uploader :pic2, ImageUploader
+  mount_uploader :pic3, ImageUploader
 end
