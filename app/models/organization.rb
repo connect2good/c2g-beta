@@ -9,4 +9,19 @@ class Organization < ActiveRecord::Base
   has_many :benefits,
     class_name: 'Merchandise',
     foreign_key: 'organization_id'
+
+  #would be good to search all merchandise associated with an organization
+  
+  include PgSearch
+  pg_search_scope :search, against: [:name], 
+    using: {tsearch: {dictionary: "english"}}
+      # associated_against: {merchandise: [:title, :description]}
+  def self.text_search(query)
+    if query.present?
+      search(query)
+    else
+      scoped
+    end
+  end
+
 end
