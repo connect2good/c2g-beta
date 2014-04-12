@@ -1,6 +1,9 @@
 %h2 Fill out this form and we will notify #{@need} of your desire to donate!
-/ # = form_for @donation do |n|
-/ #   %p Add 1 to 3 pictures
-/ #   = link_to "Picture 1", "#"
-/ #   = link_to "Add more pictures", "#"
-/ #   = n.submit
+= form_for @donation do |n|
+  %p Upload photo
+  = n.file_field :pic1
+  %p Upload photo
+  = n.file_field :pic2
+  %p Upload photo
+  = n.file_field :pic3
+  =n.submit

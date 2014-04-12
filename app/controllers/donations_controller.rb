@@ -5,14 +5,15 @@ class DonationsController < ApplicationController
 
   def new
     @need = Need.find(params[:need_id]).organization.name
-    # @organization = @need.organization
+    @donation = Donation.new
   end
 
   def create
-    @need = Need.find(params[:id])
     @donation = Donation.new(donations_params)
     if @donation.save
       redirect_to @donation
+    else
+      render 'new'
     end
   end
 
@@ -23,6 +24,6 @@ class DonationsController < ApplicationController
 
 private
   def donations_params
-    params.require(:donation).permit(:good_id)
+    params.require(:donation).permit(:pic1, :pic2, :pic3)
   end
 end
