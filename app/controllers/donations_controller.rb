@@ -4,9 +4,8 @@ class DonationsController < ApplicationController
   end
 
   def new
-    @donation = Donation.new
-    @need = Need.find(params[:need_id])
-    @organization = @need.organization
+    @need = Need.find(params[:need_id]).organization.name
+    # @organization = @need.organization
   end
 
   def create
