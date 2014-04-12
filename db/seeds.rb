@@ -1,78 +1,76 @@
 require Rails.root.join('spec', 'support', 'blueprints')
 require 'faker'
 
-%w(buyer seller beneficiary donor).each do |role|
-  Role.create name: role
-end
+# Make Sonny !Admin
+individual = Individual.make
+individual.name = 'Sonny !Admin'
+individual.email = 'sonnyg.email@gmail.com'
+individual.password = 'test1234'
+individual.password_confirmation = individual.password
+individual.save! validate: false
 
+# Make Sonny Admin
+individual = Individual.make
+individual.name = 'Sonny Admin'
+individual.email = 'sg@essgee.io'
+individual.password = 'test1234'
+individual.password_confirmation = individual.password
+individual.admin = true
+individual.save! validate: false
+
+
+# Create Organizatons with Needs
 Organization.make!(5).each do |organization|
   Need.make(10).each do |need|
     need.organization_id = organization.id
-    need.save!
+    need.save! validate: false
   end
 end
 
+# Create Individuals with sale_itmes
 Individual.make!(5).each do |individual|
   Merchandise.make(10).each do |merchandise|
     merchandise.individual_id = individual.id
     merchandise.organization_id = Organization.all.sample.id
-    merchandise.save!
+    merchandise.save! validate: false
   end
 end
 
 
-
 # Market Transactions
-Purchase.make!(5).each do |transaction|
+Purchase.make!(5).each do |purchase|
   # beneficiary
-  tur = TransactionUserRole.make!(:beneficiary)
-  tur.user_id = Organization.make!.id
-  tur.transaction_id = transaction.id
-  tur.role = Role.beneficiary
-  tur.save!
+  beneficiary = Organization.all.sample
 
   # seller
-  tur = TransactionUserRole.make!(:seller)
-  tur.user_id = Individual.make!.id
-  tur.transaction_id = transaction.id
-  tur.role = Role.seller
-  tur.save!
+  merchandise = Merchandise.all.sample
+  seller      = merchandise.seller
+
+  purchase.sale_item = merchandise
 
   # buyer
-  tur = TransactionUserRole.make!(:buyer)
-  tur.user_id = Individual.make!.id
-  tur.transaction_id = transaction.id
-  tur.role = Role.buyer
-  tur.save!
+  begin
+    buyer = Individual.all.sample
+  end until buyer.id != seller.id
 
-  transaction.merchandise_id =  Merchandise.make!.id
-  transaction.save!
+  purchase.buyer = buyer
+  purchase.save! validate: false
 end
 
 
 # Donation Transaction
 Donation.make!(5).each do |donation|
+  # need
+  need = Need.all.sample
+  donation.need = need
+
   # beneficiary
-  tur = TransactionUserRole.make!(:beneficiary)
-  tur.user_id = Organization.make!.id
-  tur.transaction_id = donation.id
-  tur.role = Role.beneficiary
-  tur.save!
+  beneficiary = need.organization
 
-  # seller
-  tur = TransactionUserRole.make!(:seller)
-  tur.user_id = Individual.make!.id
-  tur.transaction_id = donation.id
-  tur.role = Role.seller
-  tur.save!
+  # donor
+  donor = Individual.all.sample
 
-  # buyer
-  tur = TransactionUserRole.make!(:buyer)
-  tur.user_id = Individual.make!.id
-  tur.transaction_id = donation.id
-  tur.role = Role.buyer
-  tur.save!
+  donation.donor = donor
 
-  donation.need_id =  Need.make!.id
-  donation.save!
+  donation.save! validate: false
 end

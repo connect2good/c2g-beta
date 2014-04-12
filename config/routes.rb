@@ -8,7 +8,7 @@ C2g::Application.routes.draw do
   root 'pages#home'
 
   resources :goods
-  
+
   resources :merchandises do
     resources :marketplaces
   end
@@ -17,14 +17,18 @@ C2g::Application.routes.draw do
     resources :donations
   end
 
+  resources :individuals
   resources :donations
   resources :needs
   resources :organizations
   resources :pages
-  resources :people
-  resources :transactions
+
   get "join", to: "pages#join"
   get "about", to: "pages#about"
+
+  namespace :admin do
+    resources :individuals
+  end
 
   # get "merchandise/search"
   # get "merchandise/index"
