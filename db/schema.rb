@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 20140412205546) do
     t.string   "status"
     t.integer  "need_id"
     t.integer  "donor_id"
+    t.string   "pic1"
+    t.string   "pic2"
+    t.string   "pic3"
   end
 
   create_table "individuals", force: true do |t|
@@ -48,12 +51,12 @@ ActiveRecord::Schema.define(version: 20140412205546) do
     t.datetime "updated_at"
     t.integer  "individual_id"
     t.integer  "organization_id"
-    t.integer  "pic1_id"
-    t.integer  "pic2_id"
-    t.integer  "pic3_id"
     t.string   "title"
     t.string   "description"
     t.boolean  "agree"
+    t.string   "pic1"
+    t.string   "pic2"
+    t.string   "pic3"
   end
 
   create_table "needs", force: true do |t|

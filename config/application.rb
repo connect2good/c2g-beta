@@ -85,17 +85,19 @@ module C2g
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    config.assets.paths << Rails.root.join(
-        "vendor",
-        "assets",
-        "stylesheets",
-    )
+    config.assets.paths += %w[ font-awesome.css foundation/include.css ]
 
-    config.assets.paths << Rails.root.join(
-        "vendor",
-        "assets",
-        "fonts",
-    )
+    # config.assets.paths << Rails.root.join(
+    #     "vendor",
+    #     "assets",
+    #     "stylesheets",
+    # )
+
+    # config.assets.paths << Rails.root.join(
+    #     "vendor",
+    #     "assets",
+    #     "fonts",
+    # )
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
