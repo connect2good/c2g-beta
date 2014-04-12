@@ -4,9 +4,14 @@
   =row :card do
     %h3== #{item.title}
     %p== #{item.description}
-    %img{src: item.pic1}
+    =row :images do
+      %img{src: item.pic1.url(:thumb)}
+      %img{src: item.pic2.url(:thumb)}
+      %img{src: item.pic3.url(:thumb)}
     =row :buttons do
       =link_to '#', class: "btn" do
         Contact Seller
+      = link_to merchandise_path(item), class: "btn" do
+        View Details
       =link_to '#', class: "btn" do
         Buy
