@@ -35,10 +35,11 @@
       ga('send', 'pageview');
 
     %body
+      = render "layouts/partials/header"
+
       %p.notice= notice
       %p.alert= alert
 
-      = render "layouts/partials/header"
       = yield
       = render "layouts/partials/footer"
       = javascript_include_tag "application"

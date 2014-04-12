@@ -17,6 +17,7 @@ C2g::Application.routes.draw do
     resources :donations
   end
 
+  resources :individuals
   resources :donations
   resources :needs
   resources :organizations
@@ -24,6 +25,10 @@ C2g::Application.routes.draw do
 
   get "join", to: "pages#join"
   get "about", to: "pages#about"
+
+  namespace :admin do
+    resources :individuals
+  end
 
   # get "merchandise/search"
   # get "merchandise/index"

@@ -1,9 +1,23 @@
 require Rails.root.join('spec', 'support', 'blueprints')
 require 'faker'
 
-%w(buyer seller beneficiary donor).each do |role|
-  Role.create name: role
-end
+# Make Sonny !Admin
+individual = Individual.make
+individual.name = 'Sonny !Admin'
+individual.email = 'sonnyg.email@gmail.com'
+individual.password = 'test1234'
+individual.password_confirmation = individual.password
+individual.save! validate: false
+
+# Make Sonny Admin
+individual = Individual.make
+individual.name = 'Sonny Admin'
+individual.email = 'sg@essgee.io'
+individual.password = 'test1234'
+individual.password_confirmation = individual.password
+individual.admin = true
+individual.save! validate: false
+
 
 # Create Organizatons with Needs
 Organization.make!(5).each do |organization|

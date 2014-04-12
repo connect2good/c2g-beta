@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140412180637) do
+ActiveRecord::Schema.define(version: 20140412205546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,22 +21,26 @@ ActiveRecord::Schema.define(version: 20140412180637) do
     t.string   "status"
     t.integer  "need_id"
     t.integer  "donor_id"
+    t.string   "pic1"
+    t.string   "pic2"
+    t.string   "pic3"
   end
 
   create_table "individuals", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.boolean  "admin",                  default: false
   end
 
   add_index "individuals", ["email"], name: "index_individuals_on_email", unique: true, using: :btree
@@ -47,12 +51,12 @@ ActiveRecord::Schema.define(version: 20140412180637) do
     t.datetime "updated_at"
     t.integer  "individual_id"
     t.integer  "organization_id"
-    t.integer  "pic1_id"
-    t.integer  "pic2_id"
-    t.integer  "pic3_id"
     t.string   "title"
     t.string   "description"
     t.boolean  "agree"
+    t.string   "pic1"
+    t.string   "pic2"
+    t.string   "pic3"
   end
 
   create_table "needs", force: true do |t|
