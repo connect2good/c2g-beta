@@ -45,7 +45,7 @@ Purchase.make!(5).each do |transaction|
   tur.role = Role.buyer
   tur.save!
 
-  transaction.merchandise_id =  Merchandise.make!.id
+  # transaction.merchandise_id =  Merchandise.make!.id
   transaction.save!
 end
 

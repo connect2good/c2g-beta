@@ -2,9 +2,12 @@
   %h3= @merchandise.title
   %p= @merchandise.description
   =row :images do
-    %img{src: @merchandise.pic1.url(:medium)}
-    %img{src: @merchandise.pic2.url(:medium)}
-    %img{src: @merchandise.pic3.url(:medium)}
+    =link_to @merchandise.pic1.url(:full) do
+      =image_tag @merchandise.pic1.url(:medium)
+    =link_to @merchandise.pic2.url(:full) do
+      =image_tag @merchandise.pic2.url(:medium)
+    =link_to @merchandise.pic3.url(:full) do
+      =image_tag @merchandise.pic3.url(:medium)
   =row :buttons do
     =link_to '#', class: "btn" do
       Contact Seller
