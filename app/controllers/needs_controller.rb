@@ -33,7 +33,7 @@ class NeedsController < ApplicationController
   end
 
   def index
-    @needs = Need.all
+    @needs = Need.order(:organization_id).page(params[:pages]).per_page(12)
   end
 
 private
