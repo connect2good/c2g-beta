@@ -5,6 +5,31 @@ files:
     mtime: '2014-04-03T10:20:41-05:00'
     size: 107556
     digest: d4e7562191ab90a7bc6997329ce20e8b
+  FontAwesome-56c36d7a255f0f6ede6fa7e6f98e0a9a.otf:
+    logical_path: FontAwesome.otf
+    mtime: '2014-04-12T18:29:21-05:00'
+    size: 62856
+    digest: 56c36d7a255f0f6ede6fa7e6f98e0a9a
+  fontawesome-webfont-54391b9119bbaa8cedc06e2f7dd4e319.eot:
+    logical_path: fontawesome-webfont.eot
+    mtime: '2014-04-12T18:29:21-05:00'
+    size: 38205
+    digest: 54391b9119bbaa8cedc06e2f7dd4e319
+  fontawesome-webfont-86fa9390cc678cd6eca463e8d09c0a4d.svg:
+    logical_path: fontawesome-webfont.svg
+    mtime: '2014-04-12T18:29:21-05:00'
+    size: 202148
+    digest: 86fa9390cc678cd6eca463e8d09c0a4d
+  fontawesome-webfont-e77e4457e71fbc69ff37e3097e8d1a19.ttf:
+    logical_path: fontawesome-webfont.ttf
+    mtime: '2014-04-12T18:29:21-05:00'
+    size: 80652
+    digest: e77e4457e71fbc69ff37e3097e8d1a19
+  fontawesome-webfont-c022112dab89faebf109ad52beaf7beb.woff:
+    logical_path: fontawesome-webfont.woff
+    mtime: '2014-04-12T18:29:21-05:00'
+    size: 44432
+    digest: c022112dab89faebf109ad52beaf7beb
   c2g-banner-d0f2f741c721fc70436a844079138333.gif:
     logical_path: c2g-banner.gif
     mtime: '2014-04-03T10:20:41-05:00'
@@ -75,6 +100,31 @@ files:
     mtime: '2014-04-11T08:56:48-05:00'
     size: 917505
     digest: 9ad81d9980c36520b0c84a129a8cf08d
+  font-awesome/fonts/FontAwesome-56c36d7a255f0f6ede6fa7e6f98e0a9a.otf:
+    logical_path: font-awesome/fonts/FontAwesome.otf
+    mtime: '2014-04-12T18:29:48-05:00'
+    size: 62856
+    digest: 56c36d7a255f0f6ede6fa7e6f98e0a9a
+  font-awesome/fonts/fontawesome-webfont-54391b9119bbaa8cedc06e2f7dd4e319.eot:
+    logical_path: font-awesome/fonts/fontawesome-webfont.eot
+    mtime: '2014-04-12T18:29:48-05:00'
+    size: 38205
+    digest: 54391b9119bbaa8cedc06e2f7dd4e319
+  font-awesome/fonts/fontawesome-webfont-86fa9390cc678cd6eca463e8d09c0a4d.svg:
+    logical_path: font-awesome/fonts/fontawesome-webfont.svg
+    mtime: '2014-04-12T18:29:48-05:00'
+    size: 202148
+    digest: 86fa9390cc678cd6eca463e8d09c0a4d
+  font-awesome/fonts/fontawesome-webfont-e77e4457e71fbc69ff37e3097e8d1a19.ttf:
+    logical_path: font-awesome/fonts/fontawesome-webfont.ttf
+    mtime: '2014-04-12T18:29:48-05:00'
+    size: 80652
+    digest: e77e4457e71fbc69ff37e3097e8d1a19
+  font-awesome/fonts/fontawesome-webfont-c022112dab89faebf109ad52beaf7beb.woff:
+    logical_path: font-awesome/fonts/fontawesome-webfont.woff
+    mtime: '2014-04-12T18:29:48-05:00'
+    size: 44432
+    digest: c022112dab89faebf109ad52beaf7beb
   vendor/modernizr-187cfe7298e2889987ca802dcefa74b8.js:
     logical_path: vendor/modernizr.js
     mtime: '2014-04-11T08:56:03-05:00'
@@ -162,6 +212,11 @@ files:
     digest: 2c9d9e3ae28cddf69b15a4dd20db1540
 assets:
   AlegreyaSansMedium.otf: AlegreyaSansMedium-d4e7562191ab90a7bc6997329ce20e8b.otf
+  FontAwesome.otf: FontAwesome-56c36d7a255f0f6ede6fa7e6f98e0a9a.otf
+  fontawesome-webfont.eot: fontawesome-webfont-54391b9119bbaa8cedc06e2f7dd4e319.eot
+  fontawesome-webfont.svg: fontawesome-webfont-86fa9390cc678cd6eca463e8d09c0a4d.svg
+  fontawesome-webfont.ttf: fontawesome-webfont-e77e4457e71fbc69ff37e3097e8d1a19.ttf
+  fontawesome-webfont.woff: fontawesome-webfont-c022112dab89faebf109ad52beaf7beb.woff
   c2g-banner.gif: c2g-banner-d0f2f741c721fc70436a844079138333.gif
   c2g-homepage.png: c2g-homepage-023655f2f1fc2637df4c3f1641815d2f.png
   c2g-logo.gif: c2g-logo-6ba059164e0395cb5841549db2c55443.gif
@@ -176,6 +231,11 @@ assets:
   logo-block-color-on-transparent.png: logo-block-color-on-transparent-74b4a52d4ff7fdebcba8bdce3f8c87b6.png
   logo-block-white-on-color.png: logo-block-white-on-color-1d51e61c0b8f254e51a01ef37ff9d228.png
   application.js: application-9ad81d9980c36520b0c84a129a8cf08d.js
+  font-awesome/fonts/FontAwesome.otf: font-awesome/fonts/FontAwesome-56c36d7a255f0f6ede6fa7e6f98e0a9a.otf
+  font-awesome/fonts/fontawesome-webfont.eot: font-awesome/fonts/fontawesome-webfont-54391b9119bbaa8cedc06e2f7dd4e319.eot
+  font-awesome/fonts/fontawesome-webfont.svg: font-awesome/fonts/fontawesome-webfont-86fa9390cc678cd6eca463e8d09c0a4d.svg
+  font-awesome/fonts/fontawesome-webfont.ttf: font-awesome/fonts/fontawesome-webfont-e77e4457e71fbc69ff37e3097e8d1a19.ttf
+  font-awesome/fonts/fontawesome-webfont.woff: font-awesome/fonts/fontawesome-webfont-c022112dab89faebf109ad52beaf7beb.woff
   vendor/modernizr.js: vendor/modernizr-187cfe7298e2889987ca802dcefa74b8.js
   jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-b821ea4101f63be41ada40803de64f67.gif
   jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-4ed05a03044f3d06514e6757a4f69cf0.png
