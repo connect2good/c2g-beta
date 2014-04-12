@@ -1,4 +1,5 @@
 =row :card do
+  %h3= Organization.find(@need.organization_id).name
   %p= @need.title
   %p= @need.description
 

@@ -11,4 +11,8 @@ class Merchandise < ActiveRecord::Base
     class_name: 'Individual',
     foreign_key: 'individual_id'
 
+  validates :title, presence: :true
+  validates :description, presence: :true
+  validates :agree, presence: :true
+
 end

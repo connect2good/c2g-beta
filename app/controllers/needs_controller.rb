@@ -20,8 +20,14 @@ class NeedsController < ApplicationController
     @need = Need.find(params[:id])
   end
 
+  def update
+    @need = Need.find(params[:id])
+    @need.update_attributes(needs_params)
+    redirect_to needs_path
+  end
+
   def destroy
-    @need = Need.find(params[:need_id])
+    @need = Need.find(params[:id])
     @need.destroy
     redirect_to needs_path
   end

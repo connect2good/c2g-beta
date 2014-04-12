@@ -1,5 +1,6 @@
 =row :card do
-  %h3= @need.title
+  %h3= Organization.find(@need.organization_id).name
+  %p= @need.title
   %p= @need.description
   =link_to new_need_donation_path(@need), class:"btn" do
     Donate
