@@ -11,3 +11,6 @@
     %p= need.description
     =link_to "#", class:"btn" do
       Donate
+
+.paginate.text-center
+  = will_paginate @needs, renderer: FoundationPagination::Rails
