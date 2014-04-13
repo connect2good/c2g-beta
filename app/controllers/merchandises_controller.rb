@@ -54,6 +54,7 @@ private
       :pic1,
       :pic2,
       :pic3,
+      :organization_id
     )
   end
 end
