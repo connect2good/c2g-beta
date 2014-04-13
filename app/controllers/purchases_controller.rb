@@ -1,4 +1,6 @@
 class PurchasesController < ApplicationController
+  before_action :authenticate_individual!
+
   def index
   end
 

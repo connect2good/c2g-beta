@@ -1,6 +1,6 @@
 =row :page_message do
-  %h3 Buy item and make the world a better place
-  
+  %h3 Purchase #{@merchandise.title}
+
 =row :card do
   %h3= @merchandise.title
   %p= @merchandise.description
@@ -13,6 +13,18 @@
       =image_tag @merchandise.pic3.url(:medium)
 
 =form_for [@merchandise, @purchase] do |f|
-  =f.label :status 
+  %input{type: "text", placeholder: "Name on Credit Card"}
+  %input{type: "text", placeholder: "Credit Card Number"}
+  .row.columns.small-6
+    %input{type: "text", placeholder: "Expiration Month"}
+  .row.columns.small-6
+    %input{type: "text", placeholder: "Expiration Year"}
+  .row
+    .columns.small-1
+      %input{type: "text", placeholder: "CVV"}
+    .columns.small-1
+    =image_tag "cvc.jpg"
+
+  =f.label :status
   =f.text_field :status
-  =f.submit
+  =f.submit "Submit Purchase"
