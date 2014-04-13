@@ -10,7 +10,7 @@ class PurchasesController < ApplicationController
   def create
     @purchase = Purchase.new(purchase_params)
     if @purchase.save
-      redirect_to merchandise_purchase_path(@purchase)
+      redirect_to merchandise_purchases_path
     else
       render "new"
     end
