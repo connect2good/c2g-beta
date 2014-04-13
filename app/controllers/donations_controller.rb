@@ -12,6 +12,10 @@ class DonationsController < ApplicationController
   def create
     @donation = Donation.new(donations_params)
     @donation.status = "pending"
+    # Must update need_id dynamically
+    @donation.need_id = 3
+    # Must update donor_id dynamically
+    @donation.donor_id = 7
     if @donation.save
       redirect_to @donation, notice: "Your donation has been submitted"
     else
