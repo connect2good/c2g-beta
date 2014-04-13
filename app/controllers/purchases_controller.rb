@@ -6,11 +6,12 @@ class PurchasesController < ApplicationController
 
   def new
     @merchandise = Merchandise.find(params[:merchandise_id])
-    @purchase = Purchase.new
+    @purchase = @merchandise.offers.new
   end
 
   def create
-    @purchase = Purchase.new(purchase_params)
+    @merchandise = Merchandise.find(params[:merchandise_id])
+    @purchase = @merchandise.offers.new(purchase_params)
     if @purchase.save
       redirect_to merchandise_purchases_path
     else
