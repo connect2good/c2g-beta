@@ -1,8 +1,19 @@
 %h1 Donation
+%p Description: 
+= @donation.description
 %table
   %tr
     %td Donation ID
     %td Donation Status
+    %td Pic 1
+    %td Pic 2
+    %td Pic 3
   %tr 
     %td= @donation.id
     %td= @donation.status
+    %td
+      =image_tag (@donation.pic1)
+    %td
+      =image_tag (@donation.pic2)
+    %td
+      =image_tag (@donation.pic3)
