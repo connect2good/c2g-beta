@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140412205546) do
+ActiveRecord::Schema.define(version: 20140413021934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140412205546) do
     t.string   "pic1"
     t.string   "pic2"
     t.string   "pic3"
+    t.string   "description"
   end
 
   create_table "individuals", force: true do |t|

@@ -1,9 +1,11 @@
-%h2 Fill out this form and we will notify #{@need} of your desire to donate!
-= form_for @donation do |n|
+%h2 Fill out this form and we will notify #{@need_name} of your desire to donate!
+= form_for [@needs, @donation] do |d|
+  = d.label :description
+  = d.text_field :description
   %p Upload photo
-  = n.file_field :pic1
+  = d.file_field :pic1
   %p Upload photo
-  = n.file_field :pic2
+  = d.file_field :pic2
   %p Upload photo
-  = n.file_field :pic3
-  =n.submit
+  = d.file_field :pic3
+  =d.submit
