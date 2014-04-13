@@ -1,4 +1,5 @@
 class NeedsController < ApplicationController
+  before_action :authenticate_organization!, only: [:new, :create, :edit, :update, :destroy]
   def new
     @need = Need.new
   end
