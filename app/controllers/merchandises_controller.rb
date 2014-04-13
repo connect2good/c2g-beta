@@ -35,7 +35,7 @@ class MerchandisesController < ApplicationController
   end
 
   def index
-    @merchandises = Merchandise.all
+    @merchandises = Merchandise.order(:title).page(params[:page]).per_page(12)
   end
 
 private
