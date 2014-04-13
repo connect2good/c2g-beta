@@ -5,7 +5,7 @@ class DonationsController < ApplicationController
 
   def new
     @need = Need.find(params[:need_id])
-    @need_name = Need.find(params[:need_id]).organization.name
+    @need_name = @need_name = @need.organization.name
     @donation = Donation.new
   end
 
@@ -13,7 +13,7 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donations_params)
     @donation.status = "pending"
     if @donation.save
-      redirect_to @donation
+      redirect_to @donation, notice: "Your donation has been submitted"
     else
       render 'new'
     end
