@@ -1,2 +1,12 @@
 %h2 Display all donation transactions
+%table
+  %tr
+    %th ID
+    %th Status
+    %th Description
+  -@donations.each do |d|
+    %tr
+      %td= d.id
+      %td= d.status
+      %td= d.description
 
