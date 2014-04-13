@@ -85,7 +85,7 @@ module C2g
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    config.assets.paths += %w[ font-awesome.css foundation/include.css ]
+    config.assets.precompile += %w[ font-awesome.css foundation/include.css ]
 
     # config.assets.paths << Rails.root.join(
     #     "vendor",
