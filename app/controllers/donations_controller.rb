@@ -6,17 +6,18 @@ class DonationsController < ApplicationController
   def new
     @need = Need.find(params[:need_id])
     @need_name = @need_name = @need.organization.name
-    @donation = Donation.new
+    @donation = @need.donations.new
+
   end
 
   def create
-    @donation = Donation.new(donations_params)
+    @need = Need.find(params[:need_id])
+    @donation = @need.donations.new(donations_params)
     @donation.status = "pending"
-    # Must update need_id dynamically
-    @donation.need_id = 3
     # Must update donor_id dynamically
     @donation.donor_id = 7
     if @donation.save
+      # Must update path
       redirect_to @donation, notice: "Your donation has been submitted"
     else
       render 'new'

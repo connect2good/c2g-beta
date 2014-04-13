@@ -1,5 +1,5 @@
 %h2 Fill out this form and we will notify #{@need_name} of your desire to donate!
-= form_for [@needs, @donation] do |d|
+= form_for [@need, @donation] do |d|
   = d.label :description
   = d.text_field :description
   %p Upload photo
