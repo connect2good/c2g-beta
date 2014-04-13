@@ -10,7 +10,7 @@ C2g::Application.routes.draw do
   resources :goods
 
   resources :merchandises do
-    resources :marketplaces
+    resources :purchases
   end
 
   resources :needs do
