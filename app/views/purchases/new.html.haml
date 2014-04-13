@@ -25,6 +25,7 @@
     .columns.small-1
     =image_tag "cvc.jpg"
 
-  =f.label :status
-  =f.text_field :status
+  =f.check_box :agree
+  =f.label "I agree to complete this transaction through the Connect 2 Good Marketplace."
+  %br
   =f.submit "Submit Purchase"

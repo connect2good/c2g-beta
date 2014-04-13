@@ -6,4 +6,6 @@ class Purchase < ActiveRecord::Base
   belongs_to :buyer,
     class_name: 'Individual',
     foreign_key: 'buyer_id'
+
+    validates :agree, presence: :true
 end

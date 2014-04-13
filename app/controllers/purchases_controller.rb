@@ -12,8 +12,9 @@ class PurchasesController < ApplicationController
   def create
     @merchandise = Merchandise.find(params[:merchandise_id])
     @purchase = @merchandise.offers.new(purchase_params)
+    @purchase.status = "pending"
     if @purchase.save
-      redirect_to merchandise_purchases_path
+      redirect_to merchandises_path, notice: "Thank you for your purchase! You will receive a confirmation email shortly."
     else
       render "new"
     end
@@ -28,6 +29,6 @@ class PurchasesController < ApplicationController
   def purchase_params
     params.require(:purchase).permit(
       :merchandise_id,
-      :status)
+      :agree)
   end
 end
