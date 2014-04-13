@@ -3,6 +3,7 @@ class PurchasesController < ApplicationController
   end
 
   def new
+
   end
 
   def create
