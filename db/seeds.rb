@@ -1,22 +1,22 @@
 require Rails.root.join('spec', 'support', 'blueprints')
 require 'faker'
 
-# Make Sonny !Admin
-individual = Individual.make
-individual.name = 'Sonny !Admin'
-individual.email = 'sonnyg.email@gmail.com'
-individual.password = 'test1234'
-individual.password_confirmation = individual.password
-individual.save! validate: false
+# # Make Sonny !Admin
+# individual = Individual.make
+# individual.name = 'Sonny !Admin'
+# individual.email = 'sonnyg.email@gmail.com'
+# individual.password = 'test1234'
+# individual.password_confirmation = individual.password
+# individual.save! validate: false
 
-# Make Sonny Admin
-individual = Individual.make
-individual.name = 'Sonny Admin'
-individual.email = 'sg@essgee.io'
-individual.password = 'test1234'
-individual.password_confirmation = individual.password
-individual.admin = true
-individual.save! validate: false
+# # Make Sonny Admin
+# individual = Individual.make
+# individual.name = 'Sonny Admin'
+# individual.email = 'sg@essgee.io'
+# individual.password = 'test1234'
+# individual.password_confirmation = individual.password
+# individual.admin = true
+# individual.save! validate: false
 
 
 # Create Organizatons with Needs

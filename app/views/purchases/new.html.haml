@@ -1,1 +1,18 @@
+=row :page_message do
+  %h3 Buy item and make the world a better place
+  
+=row :card do
+  %h3= @merchandise.title
+  %p= @merchandise.description
+  =row :images do
+    =link_to @merchandise.pic1.url(:full) do
+      =image_tag @merchandise.pic1.url(:medium)
+    =link_to @merchandise.pic2.url(:full) do
+      =image_tag @merchandise.pic2.url(:medium)
+    =link_to @merchandise.pic3.url(:full) do
+      =image_tag @merchandise.pic3.url(:medium)
 
+=form_for [@merchandise, @purchase] do |f|
+  =f.label :status 
+  =f.text_field :status
+  =f.submit
