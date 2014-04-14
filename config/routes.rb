@@ -12,6 +12,7 @@ C2g::Application.routes.draw do
 
   resources :merchandises do
     resources :purchases
+    resources :inquiries
   end
 
   resources :needs do
