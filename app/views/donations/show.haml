@@ -1,8 +1,16 @@
-%h1 Donation
-%table
-  %tr
-    %td Donation ID
-    %td Donation Status
-  %tr 
-    %td= @donation.id
-    %td= @donation.status
+=row :card do
+  / # %h3= @donation.title
+  %p= @donation.description
+  =row :images do
+    =link_to @donation.pic1.url(:full) do
+      =image_tag @donation.pic1.url(:medium)
+    =link_to @donation.pic2.url(:full) do
+      =image_tag @donation.pic2.url(:medium)
+    =link_to @donation.pic3.url(:full) do
+      =image_tag @donation.pic3.url(:medium)
+  =row :buttons do
+    =link_to '#', class: "btn" do
+      Contact Organization
+    =link_to new_need_donation_path(@donation), class: "btn" do
+      Donate
+    =link_to 'Delete Donation', @donation, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn"

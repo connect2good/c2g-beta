@@ -1,13 +1,12 @@
-%h2 Display all dination transactions
-%table 
+%h2 Display all donation transactions
+%table
   %tr
     %th ID
-    %th Good ID
     %th Status
-  - @donations.each do |item|
+    %th Description
+  -@donations.each do |d|
     %tr
-      / # %td== title #{item.title}
-      %td= item.id
-      / # %td== description #{item.description}
-      %td= item.good_id
-      %td= item.status
+      %td= d.id
+      %td= d.status
+      %td= d.description
+

@@ -13,10 +13,6 @@ class NeedsController < ApplicationController
     end
   end
 
-  def show
-    @need = Need.find(params[:id])
-  end
-
   def edit
     @need = Need.find(params[:id])
   end
@@ -33,10 +29,14 @@ class NeedsController < ApplicationController
     redirect_to needs_path
   end
 
+  def show
+    @need = Need.find(params[:id])
+  end
+
   def index
     @needs = Need.order(:organization_id).page(params[:pages]).per_page(12)
   end
-
+  
 private
   def needs_params
     params.require(:need).permit(:title, :description)

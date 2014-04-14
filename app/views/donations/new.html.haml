@@ -1,6 +1,11 @@
-%h2 Describe the item you'd like to donate
-= form_for @donation do |n|
-  %p Add 1 to 3 pictures
-  = link_to "Picture 1", "#"
-  = link_to "Add more pictures", "#"
-  = n.submit
+%h2 Fill out this form and we will notify #{@need_name} of your desire to donate!
+= form_for [@need, @donation] do |d|
+  = d.label :description
+  = d.text_field :description
+  %p Upload photo
+  = d.file_field :pic1
+  %p Upload photo
+  = d.file_field :pic2
+  %p Upload photo
+  = d.file_field :pic3
+  =d.submit
