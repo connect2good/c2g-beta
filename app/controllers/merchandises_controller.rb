@@ -1,12 +1,13 @@
 class MerchandisesController < ApplicationController
   before_action :load_merchandise, only: [:show, :edit, :destroy, :update]
-
+  before_action :authenticate_individual!, only: [:new, :create, :update]
   def new
     @merchandise = Merchandise.new
   end
 
   def create
     @merchandise = Merchandise.new(merchandise_params)
+    @merchandise.individual_id = current_individual.id
     if @merchandise.save
       redirect_to @merchandise
     else
@@ -54,7 +55,8 @@ private
       :pic1,
       :pic2,
       :pic3,
-      :organization_id
+      :organization_id,
+      :individual_id
     )
   end
 end
