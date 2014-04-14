@@ -1,0 +1,9 @@
+%h3 This is your confirmation email.
+%p You purchased the following item, details below:
+%h5 Title:
+%p= Merchandise.find(@purchase.merchandise_id).title
+%h5 Description:
+%p= Merchandise.find(@purchase.merchandise_id).description
+=image_tag Merchandise.find(@purchase.merchandise_id).pic1
+=image_tag Merchandise.find(@purchase.merchandise_id).pic2
+=image_tag Merchandise.find(@purchase.merchandise_id).pic3

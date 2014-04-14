@@ -16,6 +16,8 @@ class PurchasesController < ApplicationController
     @purchase.buyer_id = current_individual.id
     if @purchase.save
       redirect_to merchandises_path, notice: "Thank you for your purchase! You will receive a confirmation email shortly."
+      Notifier.buyer_confirmation(@purchase).deliver
+      Notifier.seller_confirmation(@purchase).deliver
     else
       render "new"
     end

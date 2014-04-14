@@ -11,7 +11,7 @@ class MerchandisesController < ApplicationController
     if @merchandise.save
       redirect_to @merchandise
     else
-      render "new"
+      render "new", notice: "There was an error processing your request."
     end
   end
 
