@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140414154941) do
     t.string   "pic1"
     t.string   "pic2"
     t.string   "pic3"
+    t.string   "description"
   end
 
   create_table "individuals", force: true do |t|
