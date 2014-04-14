@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140413021934) do
+ActiveRecord::Schema.define(version: 20140414154941) do
+>>>>>>> beta
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +47,14 @@ ActiveRecord::Schema.define(version: 20140413021934) do
 
   add_index "individuals", ["email"], name: "index_individuals_on_email", unique: true, using: :btree
   add_index "individuals", ["reset_password_token"], name: "index_individuals_on_reset_password_token", unique: true, using: :btree
+
+  create_table "inquiries", force: true do |t|
+    t.integer  "merchandise_id"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "individual_id"
+  end
 
   create_table "merchandises", force: true do |t|
     t.datetime "created_at"
@@ -92,6 +101,7 @@ ActiveRecord::Schema.define(version: 20140413021934) do
     t.string   "status"
     t.datetime "closed_at"
     t.integer  "buyer_id"
+    t.boolean  "agree"
   end
 
   create_table "roles", force: true do |t|

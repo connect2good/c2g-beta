@@ -1,4 +1,9 @@
 C2g::Application.routes.draw do
+  get "inquiries/new"
+  get "inquiries/create"
+  get "purchases/index"
+  get "purchases/new"
+  get "purchases/create"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -7,10 +12,9 @@ C2g::Application.routes.draw do
 
   root 'pages#home'
 
-  resources :goods
-
   resources :merchandises do
-    resources :marketplaces
+    resources :purchases
+    resources :inquiries
   end
 
   resources :needs do

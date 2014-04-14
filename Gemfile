@@ -31,7 +31,7 @@ group :production, :staging do
   gem 'rails_12factor'
 end
 
-group :assets do
+group :assets, :production do
   gem 'coffee-rails', '~> 4.0'
   gem 'html5shiv-rails'
   gem 'jquery-ui-rails'

@@ -1,8 +1,5 @@
 class NeedsController < ApplicationController
-  def index
-    @needs = Need.order(:organization_id).page(params[:page]).per_page(12)
-  end
-
+  before_action :authenticate_organization!, only: [:new, :create, :edit, :update, :destroy]
   def new
     @need = Need.new
   end
@@ -36,6 +33,10 @@ class NeedsController < ApplicationController
     @need = Need.find(params[:id])
   end
 
+  def index
+    @needs = Need.order(:organization_id).page(params[:pages]).per_page(12)
+  end
+  
 private
   def needs_params
     params.require(:need).permit(:title, :description)

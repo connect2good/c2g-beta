@@ -11,6 +11,8 @@ class Merchandise < ActiveRecord::Base
     class_name: 'Individual',
     foreign_key: 'individual_id'
 
+  has_many :inquiries
+
   validates :title, presence: :true
   validates :description, presence: :true
   validates :agree, presence: :true
@@ -21,7 +23,7 @@ class Merchandise < ActiveRecord::Base
   mount_uploader :pic3, ImageUploader
 
   include PgSearch
-  pg_search_scope :search, against: [:title, :description], 
+  pg_search_scope :search, against: [:title, :description],
     using: {tsearch: {dictionary: "english"}}
       # associated_against: {organization: [:name]}
   def self.text_search(query)

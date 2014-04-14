@@ -1,0 +1,12 @@
+=row :page_message do
+  %h3 Contact the Seller
+
+=row :instructions do
+  %p Fill out the form below to contact the seller for more information
+
+=form_for [@merchandise, @inquiry] do |f|
+  =f.label "Your Question or Comment"
+  =f.text_area :comment, size: "20x5"
+  =f.submit "Contact Seller"
+
+

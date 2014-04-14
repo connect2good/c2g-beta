@@ -1,12 +1,13 @@
 class MerchandisesController < ApplicationController
   before_action :load_merchandise, only: [:show, :edit, :destroy, :update]
-
+  before_action :authenticate_individual!, only: [:new, :create, :update]
   def new
     @merchandise = Merchandise.new
   end
 
   def create
     @merchandise = Merchandise.new(merchandise_params)
+    @merchandise.individual_id = current_individual.id
     if @merchandise.save
       redirect_to @merchandise
     else
@@ -38,6 +39,10 @@ class MerchandisesController < ApplicationController
     @merchandises = Merchandise.order(:title).page(params[:page]).per_page(12)
   end
 
+  def contact
+
+  end
+
 private
 
   def load_merchandise
@@ -54,6 +59,8 @@ private
       :pic1,
       :pic2,
       :pic3,
+      :organization_id,
+      :individual_id
     )
   end
 end
