@@ -1,0 +1,31 @@
+=row :page_message do
+  %h3 Purchase #{@merchandise.title}
+
+=row :card do
+  %h3= @merchandise.title
+  %p= @merchandise.description
+  =row :images do
+    =link_to @merchandise.pic1.url(:full) do
+      =image_tag @merchandise.pic1.url(:medium)
+    =link_to @merchandise.pic2.url(:full) do
+      =image_tag @merchandise.pic2.url(:medium)
+    =link_to @merchandise.pic3.url(:full) do
+      =image_tag @merchandise.pic3.url(:medium)
+
+=form_for [@merchandise, @purchase] do |f|
+  %input{type: "text", placeholder: "Name on Credit Card"}
+  %input{type: "text", placeholder: "Credit Card Number"}
+  .row.columns.small-6
+    %input{type: "text", placeholder: "Expiration Month"}
+  .row.columns.small-6
+    %input{type: "text", placeholder: "Expiration Year"}
+  .row
+    .columns.small-1
+      %input{type: "text", placeholder: "CVV"}
+    .columns.small-1
+    =image_tag "cvc.jpg"
+
+  =f.check_box :agree
+  =f.label "I agree to complete this transaction through the Connect 2 Good Marketplace."
+  %br
+  =f.submit "Submit Purchase"
