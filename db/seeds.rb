@@ -23,10 +23,13 @@ end
 
 # Parameters
 PASSWORD                     = 'test1234'
-N_INDIVIDUALS                = 3
-N_ORGANIZATIONS              = 3
-N_NEEDS_PER_ORGANIZATION     = 3
-N_MERCHANDISE_PER_INDIVIDUAL = 3
+N_INDIVIDUALS                = 5
+N_ORGANIZATIONS              = 10
+N_NEEDS_PER_ORGANIZATION     = 10
+N_PURCHASES                  = 10
+N_MERCHANDISE_PER_INDIVIDUAL = 5
+N_DONATIONS_PER_DEV          = 5
+N_DONATIONS                  = 10
 
 
 puts 'Creating Organizations with Needs...'
@@ -110,7 +113,7 @@ end
 
 puts 'Creating Market Transactions for Individuals...'
 # Market Transactions
-Purchase.make!(5).each do |purchase|
+Purchase.make!(N_PURCHASES).each do |purchase|
   # beneficiary
   beneficiary = Organization.all.sample
 
@@ -129,21 +132,45 @@ Purchase.make!(5).each do |purchase|
   purchase.save! validate: false
 end
 
-# # Donation Transaction
-# Donation.make!(5).each do |donation|
-#   # need
-#   need = Need.all.sample
-#   donation.need_id = need.id
 
-#   # beneficiary
-#   beneficiary = need.organization
+puts 'Creating Donations for Devs(!Admin)...'
+# Donation Transactions
+devs_not_admin.each do |dev|
+  # donor
+  donor = Individual.find_by(email: dev[:email])
 
-#   # donor
-#   donor = Individual.all.sample
+  Donation.make!(N_DONATIONS_PER_DEV).each do |donation|
+    # need
+    need = Need.all.sample
+    donation.need_id = need.id
 
-#   donation.donor = donor
+    # beneficiary
+    beneficiary = need.organization
 
-#   donation.save! validate: false
-# end
+    # donor
+    donation.donor = donor
+
+    save = donation.save! validate: false
+  end
+
+end
+
+puts 'Creating Donations for Individuals...'
+# Donation Transaction
+Donation.make!(5).each do |donation|
+  # need
+  need = Need.all.sample
+  donation.need_id = need.id
+
+  # beneficiary
+  beneficiary = need.organization
+
+  # donor
+  donor = Individual.all.sample
+
+  donation.donor = donor
+
+  donation.save! validate: false
+end
 
 puts "Seeds complete."
