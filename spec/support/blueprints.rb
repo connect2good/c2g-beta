@@ -43,6 +43,7 @@ Purchase.blueprint do
   status  { %w[pending accepted declined].sample }
   closed_at do
     (1 + rand(3)).to_i.days.ago
+  agree       { [ true, false ].sample }
   end
 end
 

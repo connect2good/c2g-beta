@@ -11,6 +11,6 @@
   =row :buttons do
     =link_to '#', class: "btn" do
       Contact Seller
-    =link_to '#', class: "btn" do
+    =link_to new_merchandise_purchase_path(@merchandise), class: "btn" do
       Buy
     =link_to 'Delete Merchandise', @merchandise, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn"
