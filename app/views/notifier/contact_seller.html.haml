@@ -1,1 +1,5 @@
-%h3= @inquiry.comment
+%p Hello, a potential buyer has a question for you below:
+
+%p= @inquiry.comment
+
+%p= mail_to("#{Individual.find(@inquiry.individual_id).email}", "Send response email")
