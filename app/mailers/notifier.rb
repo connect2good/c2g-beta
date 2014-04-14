@@ -25,8 +25,9 @@ class Notifier < ActionMailer::Base
 
     @donation = donation
 
-    mail( to: "#{@donation.donor.email}",
-          subject: "Connect 2 Good Offer!")
+    # This line keeps messing up:
+    # mail( to: "#{@donation.donor.email}",
+    #       subject: "Connect 2 Good Offer!")
   end
 
   def contact_seller(inquiry)
