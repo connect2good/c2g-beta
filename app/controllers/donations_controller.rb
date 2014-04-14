@@ -27,6 +27,12 @@ class DonationsController < ApplicationController
     @donation = Donation.find(params[:id])
   end
 
+  def destroy
+    @donation = Donation.find(params[:id])
+    @donation.destroy
+    redirect_to needs_path
+  end
+
 
 private
   def donations_params
