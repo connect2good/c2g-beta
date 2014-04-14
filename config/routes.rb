@@ -14,6 +14,7 @@ C2g::Application.routes.draw do
 
   resources :merchandises do
     resources :purchases
+    # resources :payments, only: [ :new, :create ]
   end
 
   resources :needs do

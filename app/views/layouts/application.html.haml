@@ -17,9 +17,12 @@
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
 
     %title= content_for?(:title) ? yield(:title) : "Connect 2 Good"
+    = javascript_include_tag "https://js.balancedpayments.com/1.1/balanced.js"
     = favicon_link_tag '/favicon.ico'
     = stylesheet_link_tag "main"
     = csrf_meta_tags
+    /the line below breaks the page load
+    / = tag :meta, :name => "balanced-key", :content => #BALANCED_PUBLIC_KEY
 
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
