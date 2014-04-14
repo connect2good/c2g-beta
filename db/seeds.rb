@@ -1,6 +1,16 @@
 require Rails.root.join('spec', 'support', 'blueprints')
 require 'faker'
 
+# Parameters
+PASSWORD                     = 'test1234'
+N_INDIVIDUALS                = 5
+N_ORGANIZATIONS              = 10
+N_NEEDS_PER_ORGANIZATION     = 10
+N_PURCHASES                  = 10
+N_MERCHANDISE_PER_INDIVIDUAL = 5
+N_DONATIONS_PER_DEV          = 5
+N_DONATIONS                  = 10
+
 def devs_admins
   # Make Dev Users Admin
   [
@@ -14,23 +24,12 @@ end
 def devs_not_admin
   # Make Dev Users !Admin
   [
-    { name: 'Sonny', email: 'sonny@c2g.com' },
-    { name: 'Todd',  email: 'todd@c2g.com'  },
-    { name: 'Matt',  email: 'matt@c2g.com'  },
-    { name: 'Bill',  email: 'bill@c2g.com'  },
+    { name: 'Sonny', email: 'sonnyg.email@gmail.com'   },
+    { name: 'Todd',  email: 'twac05@yahoo.com'         },
+    { name: 'Matt',  email: 'mattdenton.dev@gmail.com' },
+    { name: 'Bill',  email: 'billfienberg@gmail.com'   },
   ]
 end
-
-# Parameters
-PASSWORD                     = 'test1234'
-N_INDIVIDUALS                = 5
-N_ORGANIZATIONS              = 10
-N_NEEDS_PER_ORGANIZATION     = 10
-N_PURCHASES                  = 10
-N_MERCHANDISE_PER_INDIVIDUAL = 5
-N_DONATIONS_PER_DEV          = 5
-N_DONATIONS                  = 10
-
 
 puts 'Creating Organizations with Needs...'
 # Create Organizatons with Needs
