@@ -83,27 +83,51 @@ Individual.make!(N_INDIVIDUALS).each do |individual|
   end
 end
 
+puts 'Creating Market Transactions for Devs(!Admin)...'
+# Market Transactions
+devs_not_admin.each do |dev|
+  # seller
+  seller = Individual.find_by(email: dev[:email])
+  seller.sale_items.each do |sale_item|
 
-# # Market Transactions
-# Purchase.make!(5).each do |purchase|
-#   # beneficiary
-#   beneficiary = Organization.all.sample
+    purchase = Purchase.make!
+      # beneficiary
+      beneficiary = Organization.all.sample
 
-#   # seller
-#   merchandise = Merchandise.all.sample
-#   seller      = merchandise.seller
+      # sale_item
+      purchase.sale_item = sale_item
 
-#   purchase.sale_item = merchandise
+      # buyer
+      begin
+        buyer = Individual.all.sample
+      end until buyer.id != seller.id
+      purchase.buyer = buyer
 
-#   # buyer
-#   begin
-#     buyer = Individual.all.sample
-#   end until buyer.id != seller.id
+      purchase.save! validate: false
+    
+  end
+end
 
-#   purchase.buyer = buyer
-#   purchase.save! validate: false
-# end
+puts 'Creating Market Transactions for Individuals...'
+# Market Transactions
+Purchase.make!(5).each do |purchase|
+  # beneficiary
+  beneficiary = Organization.all.sample
 
+  # seller
+  merchandise = Merchandise.all.sample
+  seller      = merchandise.seller
+
+  purchase.sale_item = merchandise
+
+  # buyer
+  begin
+    buyer = Individual.all.sample
+  end until buyer.id != seller.id
+
+  purchase.buyer = buyer
+  purchase.save! validate: false
+end
 
 # # Donation Transaction
 # Donation.make!(5).each do |donation|
