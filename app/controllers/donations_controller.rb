@@ -1,4 +1,5 @@
 class DonationsController < ApplicationController
+  before_action :authenticate_individual!
   def index
     @donations = Donation.all
   end
@@ -15,12 +16,11 @@ class DonationsController < ApplicationController
     @donation = @need.donations.new(donations_params)
     @donation.status = "pending"
     # Must update donor_id dynamically
-    @donation.donor_id = 7
+    @donation.donor_id = current_individual.id
     @donation.pic1 = params[:pic1]
     @donation.pic2 = params[:pic2]
     @donation.pic3 = params[:pic3]
     if @donation.save
-      # Must update path
       redirect_to @donation, notice: "Your donation has been submitted"
     else
       render 'new'

@@ -1,4 +1,8 @@
 class NeedsController < ApplicationController
+  def index
+    @needs = Need.order(:organization_id).page(params[:page]).per_page(12)
+  end
+
   def new
     @need = Need.new
   end
@@ -10,10 +14,6 @@ class NeedsController < ApplicationController
     else
       render "new"
     end
-  end
-
-  def show
-    @need = Need.find(params[:id])
   end
 
   def edit
@@ -32,8 +32,8 @@ class NeedsController < ApplicationController
     redirect_to needs_path
   end
 
-  def index
-    @needs = Need.order(:organization_id).page(params[:pages]).per_page(12)
+  def show
+    @need = Need.find(params[:id])
   end
 
 private
