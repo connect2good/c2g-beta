@@ -39,6 +39,10 @@ class MerchandisesController < ApplicationController
     @merchandises = Merchandise.order(:title).page(params[:page]).per_page(12)
   end
 
+  def contact
+
+  end
+
 private
 
   def load_merchandise

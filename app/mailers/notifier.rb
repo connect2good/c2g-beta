@@ -34,4 +34,14 @@ class Notifier < ActionMailer::Base
     mail( to: "#{@offer.email}",
           subject: "Connect 2 Good Offer!")
   end
+
+  def contact_seller(inquiry)
+
+    data = File.read("#{Rails.root}/app/assets/images/c2g-homepage.png")
+
+    @inquiry = inquiry
+
+    mail( to: "#{Merchandise.find(@inquiry.merchandise_id).seller.email}",
+          subject: "Connect 2 Good Marketplace: Question from a Potential Buyer")
+  end
 end

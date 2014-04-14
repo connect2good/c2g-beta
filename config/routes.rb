@@ -1,4 +1,6 @@
 C2g::Application.routes.draw do
+  get "inquiries/new"
+  get "inquiries/create"
   get "purchases/index"
   get "purchases/new"
   get "purchases/create"
@@ -10,10 +12,9 @@ C2g::Application.routes.draw do
 
   root 'pages#home'
 
-  resources :goods
-
   resources :merchandises do
     resources :purchases
+    resources :inquiries
   end
 
   resources :needs do
