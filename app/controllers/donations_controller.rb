@@ -16,9 +16,6 @@ class DonationsController < ApplicationController
     @donation = @need.donations.new(donations_params)
     @donation.status = "pending"
     @donation.donor_id = current_individual.id
-    @donation.pic1 = params[:pic1]
-    @donation.pic2 = params[:pic2]
-    @donation.pic3 = params[:pic3]
     if @donation.save
       redirect_to @donation, notice: "Your donation has been submitted"
     else
