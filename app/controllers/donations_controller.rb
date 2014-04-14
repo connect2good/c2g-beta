@@ -18,6 +18,8 @@ class DonationsController < ApplicationController
     @donation.donor_id = current_individual.id
     if @donation.save
       redirect_to @donation, notice: "Your donation has been submitted"
+      Notifier.offer_sent(@donation).deliver
+      Notifier.offer_received(@donation).deliver
     else
       render 'new'
     end

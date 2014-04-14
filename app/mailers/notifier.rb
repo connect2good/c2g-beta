@@ -7,31 +7,25 @@ class Notifier < ActionMailer::Base
   #   en.notifier.offer_received.subject
   #
 
-  def offer_received(offer)
+  def offer_received(donation)
 
     data = File.read("#{Rails.root}/app/assets/images/c2g-homepage.png")
     attachments.inline['logo.png'] = data
 
-    @offer = offer
+    @donation = donation
 
-    if offer.name != "anonymous"
-      @text = "named " + @offer.name
-    else
-      @text = "who wishes to remain anonymous"
-    end
-
-    mail( to: "#{@offer.organization.email}",
+    mail( to: "#{Need.find(@donation.need_id).organization.email}",
           subject: "Connect 2 Good Donation Offer")
   end
 
-  def offer_sent(offer)
+  def offer_sent(donation)
 
     data = File.read("#{Rails.root}/app/assets/images/c2g-homepage.png")
     attachments.inline['logo.png'] = data
 
-    @offer = offer
+    @donation = donation
 
-    mail( to: "#{@offer.email}",
+    mail( to: "#{Individual.find(@donation.donor_id).email}",
           subject: "Connect 2 Good Offer!")
   end
 
