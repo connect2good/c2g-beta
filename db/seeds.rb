@@ -62,7 +62,7 @@ end
 Donation.make!(5).each do |donation|
   # need
   need = Need.all.sample
-  donation.need = need
+  donation.need_id = need.id
 
   # beneficiary
   beneficiary = need.organization
