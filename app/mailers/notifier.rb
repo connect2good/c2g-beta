@@ -25,13 +25,14 @@ class Notifier < ActionMailer::Base
 
     @donation = donation
 
-    mail( to: "#{Individual.find(@donation.donor_id).email}",
+    mail( to: "#{@donation.donor.email}",
           subject: "Connect 2 Good Offer!")
   end
 
   def contact_seller(inquiry)
 
     data = File.read("#{Rails.root}/app/assets/images/c2g-homepage.png")
+    attachments.inline['logo.png'] = data
 
     @inquiry = inquiry
 
@@ -41,6 +42,9 @@ class Notifier < ActionMailer::Base
 
   def buyer_confirmation(purchase)
 
+    data = File.read("#{Rails.root}/app/assets/images/c2g-homepage.png")
+    attachments.inline['logo.png'] = data
+
     @purchase = purchase
 
     mail( to: "#{Individual.find(@purchase.buyer_id).email}",
@@ -49,6 +53,9 @@ class Notifier < ActionMailer::Base
   end
 
   def seller_confirmation(purchase)
+
+    data = File.read("#{Rails.root}/app/assets/images/c2g-homepage.png")
+    attachments.inline['logo.png'] = data
 
     @purchase = purchase
 
