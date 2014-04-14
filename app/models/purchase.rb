@@ -7,5 +7,5 @@ class Purchase < ActiveRecord::Base
     class_name: 'Individual',
     foreign_key: 'buyer_id'
 
-    validates :agree, presence: :true
+    # validates :agree, presence: :true
 end
