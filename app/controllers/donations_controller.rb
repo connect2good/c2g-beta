@@ -15,7 +15,6 @@ class DonationsController < ApplicationController
     @need = Need.find(params[:need_id])
     @donation = @need.donations.new(donations_params)
     @donation.status = "pending"
-    # Must update donor_id dynamically
     @donation.donor_id = current_individual.id
     @donation.pic1 = params[:pic1]
     @donation.pic2 = params[:pic2]
