@@ -48,9 +48,28 @@ Purchase.blueprint do
 end
 
 Donation.blueprint do
+  description { Faker::Company::bs }
   status  { %w[pending accepted declined].sample }
   closed_at do
     (1 + rand(3)).to_i.days.ago
+  end
+  pic1 do
+    Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+      'image/jpg'
+      )
+  end
+  pic2 do
+    Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+      'image/jpg'
+      )
+  end
+  pic3 do
+    Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+      'image/jpg'
+      )
   end
 end
 

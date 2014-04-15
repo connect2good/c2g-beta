@@ -22,6 +22,8 @@ C2g::Application.routes.draw do
   end
 
   resources :individuals
+  get '/individuals/:id/:content_view', to: 'individuals#show', as: :individuals_content_view
+
   resources :donations
   resources :needs
   resources :organizations

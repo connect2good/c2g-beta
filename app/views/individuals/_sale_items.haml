@@ -1,0 +1,8 @@
+.row
+  .columns.large-12
+    %p Sale Items
+    - @sale_items.each do |sale_item|
+      %p== title #{sale_item.title}
+      %p== descrption #{sale_item.description}
+      %p== seller #{sale_item.seller.name}
+      %p== benficiary #{sale_item.beneficiary.name}
