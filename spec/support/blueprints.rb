@@ -62,7 +62,7 @@ end
 Merchandise.blueprint do
   title       { Faker::Company::bs }
   description { Faker::Company::bs }
-  agree       { [ true, false ].sample }
+  agree       { true }
   pic1 do
     Rack::Test::UploadedFile.new(
       Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
