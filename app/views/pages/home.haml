@@ -1,37 +1,38 @@
-= row :page_message do
-  .columns.small-12
-    %p Welcome to Connect 2 Good!
-    %p We make it easy for you to pass on used items to nonprofits that need them.
+=row :background_image do
+  = row :page_message do
+    .columns.small-12
+      %p Welcome to Connect 2 Good!
+      %p We make it easy for you to pass on used items to nonprofits that need them.
 
-= row do
-  .columns.small-12
-    = link_to new_merchandise_path,
-      class: 'btn' do
-      Sell
+  = row do
+    .columns.small-12
+      = link_to new_merchandise_path,
+        class: 'btn' do
+        Sell
 
-= row :instructions do
-  .columns.small-12
-    %p.instructions-step Step 1. Find a need in our community that you may be able to fill.
+  = row :instructions do
+    .columns.small-12
+      %p.instructions-step Step 1. Find a need in our community that you may be able to fill.
 
-    = search_bar 'What would you like to donate?'
+      = search_bar 'What would you like to donate?'
 
-    .row
-      .columns.small-12
-        = button_tag :query, class: "btn" do
-          Search Needs
-        = link_to needs_path,
-          class: 'btn' do
-          View All Needs
+      .row
+        .columns.small-12
+          = button_tag :query, class: "btn" do
+            Search Needs
+          = link_to needs_path,
+            class: 'btn' do
+            View All Needs
 
-= row do
-  .columns.small-12
-    = link_to merchandises_path,
-      class: 'btn' do
-      shop
+  = row do
+    .columns.small-12
+      = link_to merchandises_path,
+        class: 'btn' do
+        shop
 
-= row do
-  .columns.small-12
-    %p Become part of our community
-    = link_to join_path,
-      class: 'btn' do
-      join
+  = row do
+    .columns.small-12
+      %p Become part of our community
+      = link_to join_path,
+        class: 'btn' do
+        join
