@@ -28,37 +28,27 @@
               .columns.small-12
                 = button_tag :query, class: "btn" do
                   Search Needs
-          %span.bl-icon.bl-icon-close
+          %span.bl-icon.bl-icon-close &#215;
         %section#bl-work-section
           .bl-box
             -# Sell --------------------------------------------------------------------
             %h2.bl-icon.bl-icon-sell.white Sell
           .bl-content
             %h2 Sell
-            %ul#bl-work-items
-              %li{"data-panel" => "panel-1"}
-                %a{href: "#"}
-                  %img{src: "images/1.jpg"}/
-              %li{"data-panel" => "panel-2"}
-                %a{href: "#"}
-                  %img{src: "images/2.jpg"}/
-              %li{"data-panel" => "panel-3"}
-                %a{href: "#"}
-                  %img{src: "images/3.jpg"}/
-              %li{"data-panel" => "panel-4"}
-                %a{href: "#"}
-                  %img{src: "images/4.jpg"}/
-            %p
-              Illustrations by
-              %a{href: "http://dribbble.com/isaac317/click"} Isaac Montemayor
-          %span.bl-icon.bl-icon-close
+            %p Sell unwanted goods, and donate up to 100% of the proceeds to the non-profit of your choice
+            = row do
+              .columns.small-12
+                = link_to new_merchandise_path,
+                  class: 'btn' do
+                  Sell
+          %span.bl-icon.bl-icon-close &#215;
         %section
           .bl-box
             -# Shop --------------------------------------------------------------------
             %h2.bl-icon.bl-icon-shop.white Shop
           .bl-content
             %h2 Shop
-          %span.bl-icon.bl-icon-close
+          %span.bl-icon.bl-icon-close &#215;
         %section
           .bl-box
             -# Join -------------------------------------------------------------------
@@ -66,7 +56,7 @@
           .bl-content
             %h2 Join
             
-          %span.bl-icon.bl-icon-close
+          %span.bl-icon.bl-icon-close &#215;
         / Panel items for the works
         #bl-panel-work-items.bl-panel-items
           %div{"data-panel" => "panel-1"}
