@@ -1,10 +1,9 @@
+= row :page_message do
+  .columns.small-12.text-center
+    %h3 Welcome to Connect 2 Good!
+    %p We make it easy for you to pass on used items to nonprofits that need them.
+    %br
 =row :background_image do
-  = row :page_message do
-    .columns.small-12
-      %p Welcome to Connect 2 Good!
-      %p We make it easy for you to pass on used items to nonprofits that need them.
-
-
   = row :instructions do
     .columns.small-12
       %p.instructions-step Step 1. Find a need in our community that you may be able to fill.
@@ -15,21 +14,27 @@
         .columns.small-12
           = button_tag :query, class: "btn" do
             Search Needs
-%hr
-  = row do
-    .columns.small-6.text-center
-      = link_to new_merchandise_path do
-        = button_tag :sell do
-          Sell
 
-    .columns.small-6.text-center
-      = link_to merchandises_path do
-        = button_tag :shop do
-          Shop
+=row :instructions do
+  .columns.small-12.text-center
+    %h4 Don't see a need you can donate do?
+    %h4 Check out the new Connect 2 Good Marketplace!
+    = row do
+      .columns.small-6.text-center
+        %p Put your item up for sale and donate the proceeds to the nonprofit of your choice!
+        = link_to new_merchandise_path do
+          = button_tag :sell do
+            Sell
+
+      .columns.small-6.text-center
+        %p Shop our marketplace. A portion of every purchase is donated to local nonprofits!
+        = link_to merchandises_path do
+          = button_tag :shop do
+            Shop
 
   = row do
     .columns.small-12.text-center
-      %p Become part of our community
+      %p Join our Community
       = link_to join_path do
         = button_tag :join do
           Join
