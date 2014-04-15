@@ -4,6 +4,8 @@
 =row :instructions do
   %h4 Donate to one of the needs below
 
+= search_bar 'What would you like to donate?'
+
 - @needs.each do |need|
   =row :card do
     %h3= Organization.find(need.organization_id).name
