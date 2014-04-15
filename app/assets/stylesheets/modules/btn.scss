@@ -1,5 +1,5 @@
-button {
-  background-color: #FDD68B;
+button, input[class="submit"] {
+  background-color: #FFE1BE;
   &.btn-search {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -7,8 +7,11 @@ button {
 }
 
 a.btn {
-  background-color: #FDD68B;
+  background-color: #FFE1BE;
   border-radius: 0.5em;
   display: inline-block;
   padding: 10px 20px;
+  &.dark {
+    background-color: #B2CBD9;
+  }
 }
