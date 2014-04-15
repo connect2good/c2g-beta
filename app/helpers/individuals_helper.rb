@@ -1,6 +1,6 @@
 module IndividualsHelper
 
-  def content_view(view)
+  def dashboard_content(view)
     render partial: view
   end
 
