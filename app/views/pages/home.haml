@@ -6,9 +6,9 @@
 
   = row do
     .columns.small-12
-      = link_to new_merchandise_path,
-        class: 'btn' do
-        Sell
+      = link_to new_merchandise_path do
+        = button_tag :sell do
+          Sell
 
   = row :instructions do
     .columns.small-12
@@ -20,19 +20,19 @@
         .columns.small-12
           = button_tag :query, class: "btn" do
             Search Needs
-          = link_to needs_path,
-            class: 'btn' do
-            View All Needs
+          = link_to needs_path do
+            = button_tag :needs do
+              View All Needs
 
   = row do
     .columns.small-12
-      = link_to merchandises_path,
-        class: 'btn' do
-        shop
+      = link_to merchandises_path do
+        = button_tag :shop do
+          Shop
 
   = row do
     .columns.small-12
       %p Become part of our community
-      = link_to join_path,
-        class: 'btn' do
-        join
+      = link_to join_path do
+        = button_tag :join do
+          Join
