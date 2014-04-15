@@ -1,10 +1,12 @@
-%h2= "Hello representative for #{@offer.organization.name},"
+%h2= "Hello representative for #{Need.find(@donation.need_id).organization.name},"
 %br
-%h3=  "A Connect 2 Good donor, #{@text}, would like to fill one of your organization's needs!"
+%h3 A Connect 2 Good donor would like to fill one of your organization's needs!
 %h3 The donor has provided these details regarding the offered item:
-%h3= "#{@offer.description}"
-=image_tag "#{@offer.image}"
-%h3= "The donor looks forward to hearing from you via email. Their email address is: #{@offer.email}"
+%h3= "#{@donation.description}"
+=image_tag "#{@donation.pic1}"
+=image_tag "#{@donation.pic2}"
+=image_tag "#{@donation.pic3}"
+%h3= "The donor looks forward to hearing from you via email. Their email address is: #{Individual.find(@donation.donor_id).email}"
 %br
 %h3 Thank you,
 %h3 The Connect 2 Good Team
@@ -15,5 +17,5 @@
 = link_to "About C2G", "www.connect2good.com/about"
 \|
 = link_to "FAQ", "www.connect2good.com/faq"
-\| 
-= link_to "Your Organization's Needs", "www.connect2good.com/organizations/#{@offer.organization.id}"
+\|
+/ = link_to "Your Organization's Needs", "www.connect2good.com/organizations/#{@offer.organization.id}"

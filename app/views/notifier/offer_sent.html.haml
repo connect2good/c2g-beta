@@ -1,13 +1,15 @@
 
 %h1 Thank You!
 
-%h3= "An email has been sent to #{@offer.organization.name}, informing them of your desire to make a donation."
-%h3= "You should expect to receive an email response from a representative of #{@offer.organization.name} as soon as possible."
-%h3= "#{@offer.organization.name} has been provided these details regarding your desire to donate:"
-%h3= "Description: #{@offer.description}"
-=image_tag "#{@offer.image}"
-%h3= "Your email address: #{@offer.email}"
-%h3= "Your name: #{@offer.name}"
+%h3= "An email has been sent to #{Need.find(@donation.need_id).organization.name}, informing them of your desire to make a donation."
+%h3= "You should expect to receive an email response from a representative of #{Need.find(@donation.need_id).organization.name} as soon as possible."
+%h3= "#{Need.find(@donation.need_id).organization.name} has been provided these details regarding your desire to donate:"
+%h3= "Description: #{@donation.description}"
+=image_tag "#{@donation.pic1}"
+=image_tag "#{@donation.pic2}"
+=image_tag "#{@donation.pic3}"
+%h3= "Your email address: #{Individual.find(@donation.donor_id).email}"
+%h3= "Your name: #{Individual.find(Individual.find(@donation.donor_id).name}"
 %br
 %h3 Thank you again,
 %h4 The Connect 2 Good Team

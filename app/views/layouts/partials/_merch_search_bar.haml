@@ -1,0 +1,27 @@
+- placeholder_text = text_placeholder
+- opts = _opts
+
+= row :merch_search_bar,
+  class: opts[:class],
+  id:    opts[:id] do
+  = form_tag merchandises_path, method: :get do
+    .row.collapse
+      .columns.small-10
+        = txt_field placeholder_text,
+          class: 'text-field-search'
+      .columns.small-2
+        = button_tag :query, class: "btn btn-search postfix" do
+          %icon{ class: 'fa fa-search' }
+
+
+
+
+
+
+/ = form_tag merchandises_path, method: :get do
+/   .row.collapse
+/     .columns.small-10
+/       = text_field_tag :query, params[:query], placeholder: "What would you like to buy?", class: "search", autofocus: true
+/     .columns.small-2
+/       = button_tag :query, class: "btn btn-search postfix" do
+/         %icon{ class: 'fa fa-search' }
