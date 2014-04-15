@@ -64,8 +64,20 @@
             -# Join -------------------------------------------------------------------
             %h2.bl-icon.bl-icon-join.gray Join
           .bl-content
-            %h2 Join
-            
+            = row :page_message do
+              .columns.small-12
+              %h3 Join our community!
+
+            = row :user_type do
+              .columns.small-6.text-center
+                %h3 Are you an organization?
+                =link_to new_organization_registration_path, class: "btn" do
+                  Organization Sign Up
+              .columns.small-6.text-center
+                %h3 Are you an individual?
+                =link_to new_individual_registration_path, class: "btn" do
+                  Individual Sign Up
+
           %span.bl-icon.bl-icon-close
         / Panel items for the works
         #bl-panel-work-items.bl-panel-items
