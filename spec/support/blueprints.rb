@@ -62,6 +62,7 @@ end
 Merchandise.blueprint do
   title       { Faker::Company::bs }
   description { Faker::Company::bs }
+  price       { 1 + rand(100).to_i }
   agree       { true }
   pic1 do
     Rack::Test::UploadedFile.new(
@@ -82,6 +83,3 @@ Merchandise.blueprint do
       )
   end
 end
-
-
-

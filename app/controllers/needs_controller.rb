@@ -34,7 +34,12 @@ class NeedsController < ApplicationController
   end
 
   def index
-    @needs = Need.order(:organization_id).page(params[:pages]).per_page(12)
+    if params[:query].present?
+      @needs = Need.text_search(params[:query]).page(params[:pages]).per_page(12)
+    else
+      @needs = Need.order(:organization_id).page(params[:pages]).per_page(12)
+    end
+    
   end
   
 private

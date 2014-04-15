@@ -1,5 +1,5 @@
 =row :card do
-  %h3= @merchandise.title
+  %h3== #{@merchandise.title} #{number_to_currency(@merchandise.price)}
   %p= @merchandise.description
   =row :images do
     =link_to @merchandise.pic1.url(:full) do
