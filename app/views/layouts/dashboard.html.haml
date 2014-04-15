@@ -40,9 +40,16 @@
       %p.notice= notice
       %p.alert= alert
 
-      %p This is the dashboard layout
+      .row
+        .columns.large-12
+          %p This is the dashboard layout
 
-      = yield
+      .row
+        .columns.large-4
+          = yield :sidebar
+        .columns.large-8
+          = yield
+      
       = render "layouts/partials/footer"
       = javascript_include_tag "application"
     //= javascript_include_tag params[:controller]

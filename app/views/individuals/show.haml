@@ -1,1 +1,16 @@
-%p This is the individual show view
+- content_for :sidebar do
+  %p= @individual.name
+  %p= @individual.email
+
+.row
+  .columns.large-12
+    %p Sale Items
+    - @individual.sale_items.each do |sale_item|
+      %p== title #{sale_item.title}
+      %p== descrption #{sale_item.description}
+      %p== seller #{sale_item.seller.name}
+      %p== benficiary #{sale_item.beneficiary.name}
+
+    %p Donations
+    - @individual.donations.each do |donation|
+      %p== need_id #{donation.need_id}
