@@ -62,26 +62,24 @@ end
 Merchandise.blueprint do
   title       { Faker::Company::bs }
   description { Faker::Company::bs }
-  agree       { [ true, false ].sample }
-  # pic1 do
-  #   Rack::Test::UploadedFile.new(
-  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-  #     'image/jpg'
-  #     )
-  # end
-  # pic2 do
-  #   Rack::Test::UploadedFile.new(
-  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-  #     'image/jpg'
-  #     )
-  # end
-  # pic3 do
-  #   Rack::Test::UploadedFile.new(
-  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-  #     'image/jpg'
-  #     )
-  # end
+  price       { 1 + rand(100).to_i }
+  agree       { true }
+  pic1 do
+    Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+      'image/jpg'
+      )
+  end
+  pic2 do
+    Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+      'image/jpg'
+      )
+  end
+  pic3 do
+    Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+      'image/jpg'
+      )
+  end
 end
-
-
-

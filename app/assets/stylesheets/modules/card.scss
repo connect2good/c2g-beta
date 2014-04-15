@@ -1,11 +1,24 @@
 .card {
-  border: solid 1px black;
+  border: solid 1px #B2CBD9;
   border-radius: 0.5em;
   text-align: center;
   padding: 1em;
-
-  &.card-need {
-
-  }
+  background-color: #B2CBD9;
 }
+
+.card h3 {
+  font-family: cursive;
+  font-size: -webkit-xxx-large;
+}
+
+
+.card p {
+  font-family: sans-serif;
+}
+
+.card:hover {
+  background-color: white;
+  box-shadow: 10px 10px 5px #888888;
+}
+
 

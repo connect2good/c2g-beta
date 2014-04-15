@@ -36,7 +36,11 @@ class MerchandisesController < ApplicationController
   end
 
   def index
-    @merchandises = Merchandise.order(:title).page(params[:page]).per_page(12)
+    if params[:query].present?
+      @merchandises = Merchandise.text_search(params[:query]).page(params[:pages]).per_page(12)
+    else
+      @merchandises = Merchandise.order(:title).page(params[:page]).per_page(12)
+    end
   end
 
   def contact

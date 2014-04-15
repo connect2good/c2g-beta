@@ -1,8 +1,9 @@
-= search_bar 'What would you like to buy?'
+= merch_search_bar "What are you shopping for?"
+/ =render partial: "layouts/partials/merch_search_bar"
 
 - @merchandises.each do |item|
   =row :card do
-    %h3== #{item.title}
+    %h3== #{item.title} #{number_to_currency(item.price)}
     %p== #{item.description}
     =row :images do
       =link_to item.pic1.url(:full) do
@@ -12,10 +13,8 @@
       =link_to item.pic3.url(:full) do
         =image_tag item.pic3.url(:thumb)
     =row :buttons do
-      =link_to new_merchandise_inquiry_path(item), class: "btn" do
-        Contact Seller
-      =link_to new_merchandise_purchase_path(item), class: "btn" do
-        Buy
+      = sold(item)
+      
 
 .paginate.text-center
   = will_paginate @merchandises, renderer: FoundationPagination::Rails
