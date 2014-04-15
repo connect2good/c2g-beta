@@ -1,9 +1,18 @@
 .card {
-  border: solid 1px #BEDCF3;
+  border: solid 1px #B2CBD9;
   border-radius: 0.5em;
   text-align: center;
   padding: 1em;
-  background-color: #BEDCF3;
+  background-color: #B2CBD9;
+}
+
+.card h3 {
+  font-family: cursive;
+  font-size: -webkit-xxx-large;
+}
+
+.card p {
+  font-family: sans-serif;
 }
 
 .card:hover {
