@@ -1,0 +1,6 @@
+%p Purchases
+- @purchases.each do |purchase|
+  %p== merch title #{purchase.sale_item.title}
+  %p== merch description #{purchase.sale_item.description}
+  %p== merch seller #{purchase.sale_item.seller.name}
+  %p== merch status #{purchase.sale_item.sold}
