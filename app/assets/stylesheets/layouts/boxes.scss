@@ -141,20 +141,20 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.bl-icon-about:before {
+.bl-icon-gift:before {
+  content: "\e609";
+}
+
+.bl-icon-sell:before {
+  content: "\e603";
+}
+
+.bl-icon-shop:before {
   content: "\e600";
 }
 
-.bl-icon-works:before {
-  content: "\e001";
-}
-
-.bl-icon-blog:before {
-  content: "\e002";
-}
-
-.bl-icon-contact:before {
-  content: "\e003";
+.bl-icon-join:before {
+  content: "\e604";
 }
 
 .bl-main > section .bl-icon-close {
