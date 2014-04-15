@@ -24,15 +24,18 @@
         %p Put your item up for sale and donate the proceeds to the nonprofit of your choice!
         = link_to new_merchandise_path do
           = button_tag :sell do
+            %icon{ class: 'fa fa-money' }
             Sell
+            %icon{ class: 'fa fa-money' }
 
 
       .columns.small-6.text-center
         %p Shop our marketplace. A portion of every purchase is donated to local nonprofits!
         = link_to merchandises_path do
           = button_tag :shop do
+            %icon{ class: 'fa fa-shopping-cart' }
             Shop
-
+            %icon{ class: 'fa fa-shopping-cart' }
 
   = row do
     .columns.small-12.text-center
