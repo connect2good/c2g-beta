@@ -8,4 +8,11 @@ module MerchandiseHelper
       end
     end
   end
+
+  def delete_item_button(item)
+    if item.individual_id == current_individual.id
+      content_tag(:p, class: "seller_options") do
+        link_to 'Delete Merchandise', @merchandise, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn"
+    end
+  end
 end

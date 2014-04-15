@@ -9,8 +9,5 @@
     =link_to @merchandise.pic3.url(:full) do
       =image_tag @merchandise.pic3.url(:medium)
   =row :buttons do
-    =link_to '#', class: "btn" do
-      Contact Seller
-    =link_to new_merchandise_purchase_path(@merchandise), class: "btn" do
-      Buy
-    =link_to 'Delete Merchandise', @merchandise, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn"
+    = sold(@merchandise)
+    = delete_item_button(@merchandise)
