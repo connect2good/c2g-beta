@@ -4,11 +4,6 @@
       %p Welcome to Connect 2 Good!
       %p We make it easy for you to pass on used items to nonprofits that need them.
 
-  = row do
-    .columns.small-12
-      = link_to new_merchandise_path do
-        = button_tag :sell do
-          Sell
 
   = row :instructions do
     .columns.small-12
@@ -20,9 +15,12 @@
         .columns.small-12
           = button_tag :query, class: "btn" do
             Search Needs
-          = link_to needs_path do
-            = button_tag :needs do
-              View All Needs
+
+  = row do
+    .columns.small-12
+      = link_to new_merchandise_path do
+        = button_tag :sell do
+          Sell
 
   = row do
     .columns.small-12
