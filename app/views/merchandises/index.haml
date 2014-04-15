@@ -14,8 +14,8 @@
     =row :buttons do
       =link_to new_merchandise_inquiry_path(item), class: "btn" do
         Contact Seller
-      =link_to new_merchandise_purchase_path(item), class: "btn" do
-        Buy
+      = sold(item)
+      
 
 .paginate.text-center
   = will_paginate @merchandises, renderer: FoundationPagination::Rails
