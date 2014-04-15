@@ -48,6 +48,12 @@
             %h2.bl-icon.bl-icon-shop.white Shop
           .bl-content
             %h2 Shop
+            %p Browse our marketplace. Portions of each purchase are donated to local nonprofits.
+            = row do
+              .columns.small-12
+                = link_to merchandises_path,
+                  class: 'btn' do
+                  Shop Now
           %span.bl-icon.bl-icon-close &#215;
         %section
           .bl-box
@@ -55,9 +61,20 @@
             %h2.bl-icon.bl-icon-join.gray Join
           .bl-content
             %h2 Join
-            
+            = row :page_message do
+              .columns.small-12
+                %h3 Join our community!
+            = row :user_type do
+              .columns.small-6.text-center
+                %h3 Are you an organization?
+                =link_to new_organization_registration_path, class: "btn dark" do
+                  Organization Sign Up
+              .columns.small-6.text-center
+                %h3 Are you an individual?
+                =link_to new_individual_registration_path, class: "btn dark" do
+                  Individual Sign Up
           %span.bl-icon.bl-icon-close &#215;
-        / Panel items for the works
+        -#/ Panel items for the works
         #bl-panel-work-items.bl-panel-items
           %div{"data-panel" => "panel-1"}
             %div
