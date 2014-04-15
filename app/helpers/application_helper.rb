@@ -32,6 +32,14 @@ module ApplicationHelper
       }
   end
 
+  def merch_search_bar( placeholder_text='', opts={} )
+    render partial: 'layouts/partials/merch_search_bar',
+      locals: {
+        _opts: normalize_opts('', opts),
+        text_placeholder: placeholder_text
+      }
+  end
+
   def link_btn( url='#', opts={}, &block )
     partial 'partials/link_btn',
       locals: {
