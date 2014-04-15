@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20140415002602) do
     t.string   "pic2"
     t.string   "pic3"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "individuals", force: true do |t|
@@ -103,18 +105,6 @@ ActiveRecord::Schema.define(version: 20140415002602) do
     t.datetime "closed_at"
     t.integer  "buyer_id"
     t.boolean  "agree"
-  end
-
-  create_table "roles", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "transaction_user_roles", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "transaction_id"
-    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
