@@ -1,6 +1,17 @@
-%p Purchases
-- @purchases.each do |purchase|
-  %p== merch title #{purchase.sale_item.title}
-  %p== merch description #{purchase.sale_item.description}
-  %p== merch seller #{purchase.sale_item.seller.name}
-  %p== merch status #{purchase.sale_item.sold}
+.row
+  .columns.large-12
+    %h3 Purchases
+    %table
+      %thead
+        %tr
+          %th title
+          %th description
+          %th seller
+          %th sold
+      %tbody
+        - @purchases.each do |purchase|
+          %tr
+            %td= purchase.sale_item.title
+            %td= purchase.sale_item.description
+            %td= purchase.sale_item.seller.name
+            %td= purchase.sale_item.sold

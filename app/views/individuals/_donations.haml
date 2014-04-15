@@ -1,4 +1,15 @@
-%p Donations
-- @donations.each do |donation|
-  %p== description #{donation.description}
-  %p== need_id #{donation.need_id}
+.row
+  .columns.large-12
+    %h3 Donations
+    %table
+      %thead
+        %tr
+          %th need
+          %th your description
+          %th beneficiary
+      %tbody
+        - @donations.each do |donation|
+          %tr
+            %td= donation.need.title
+            %td= donation.description
+            %td= donation.need.organization.name
