@@ -63,6 +63,7 @@ Merchandise.blueprint do
   title       { Faker::Company::bs }
   description { Faker::Company::bs }
   agree       { [ true, false ].sample }
+  price       { rand(100).to_i }
   # pic1 do
   #   Rack::Test::UploadedFile.new(
   #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),

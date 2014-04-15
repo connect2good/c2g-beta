@@ -2,7 +2,7 @@
 
 - @merchandises.each do |item|
   =row :card do
-    %h3== #{item.title}
+    %h3== #{item.title} #{number_to_currency(item.price)}
     %p== #{item.description}
     =row :images do
       =link_to item.pic1.url(:full) do
