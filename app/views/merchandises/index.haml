@@ -7,14 +7,14 @@
     %p== #{item.description}
     =row :images do
       =link_to item.pic1.url(:full) do
-        =image_tag item.pic1.url(:thumb)
+        =image_tag item.pic1.url(:medium)
       =link_to item.pic2.url(:full) do
-        =image_tag item.pic2.url(:thumb)
+        =image_tag item.pic2.url(:medium)
       =link_to item.pic3.url(:full) do
-        =image_tag item.pic3.url(:thumb)
+        =image_tag item.pic3.url(:medium)
     =row :buttons do
       = sold(item)
-      
+
 
 .paginate.text-center
   = will_paginate @merchandises, renderer: FoundationPagination::Rails
