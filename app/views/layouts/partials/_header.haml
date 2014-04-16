@@ -3,7 +3,9 @@
     -# Title Area
     %li.name
       %h1
-        =link_to 'C2G', root_path
+        =link_to root_path do
+          .logo
+            =image_tag "horizontal-color-on-transparent.png"
 
     -# Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     %li.toggle-topbar
