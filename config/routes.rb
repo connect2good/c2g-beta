@@ -39,7 +39,17 @@ C2g::Application.routes.draw do
 
   resources :donations
   resources :needs
+  
   resources :organizations
+
+  get '/organizations/:id/needs',
+    to: 'organizations#show',
+    as: :organizations_needs
+
+  get '/organizations/:id/benefits',
+    to: 'organizations#show',
+    as: :organizations_benefits
+
   resources :pages
 
   get "join", to: "pages#join"

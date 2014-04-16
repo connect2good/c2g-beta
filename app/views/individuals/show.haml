@@ -1,12 +1,1 @@
-- content_for :sidebar do
-  %p Picture
-  %p= @individual.name
-  %p= @individual.email
-  %p
-    = link_to 'Sale Items', individuals_sale_items_path
-  %p
-    = link_to 'Donations', individuals_donations_path
-  %p
-    = link_to 'Purchases', individuals_purchases_path
-
-= dashboard_content(@view)
+= individual_show(@individual)
