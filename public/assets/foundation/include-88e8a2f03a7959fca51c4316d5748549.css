@@ -3913,6 +3913,49 @@ meta.foundation-mq-topbar {
     position: absolute !important;
   }
 }
+/* line 93, /Users/sonnyg/.rvm/gems/ruby-2.1.1/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_tables.scss */
+table {
+  background: white;
+  margin-bottom: 1.25rem;
+  border: solid 1px #dddddd;
+}
+/* line 55, /Users/sonnyg/.rvm/gems/ruby-2.1.1/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_tables.scss */
+table thead,
+table tfoot {
+  background: whitesmoke;
+}
+/* line 60, /Users/sonnyg/.rvm/gems/ruby-2.1.1/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_tables.scss */
+table thead tr th,
+table thead tr td,
+table tfoot tr th,
+table tfoot tr td {
+  padding: 0.5rem 0.625rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #222222;
+  text-align: left;
+}
+/* line 72, /Users/sonnyg/.rvm/gems/ruby-2.1.1/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_tables.scss */
+table tr th,
+table tr td {
+  padding: 0.5625rem 0.625rem;
+  font-size: 0.875rem;
+  color: #222222;
+}
+/* line 80, /Users/sonnyg/.rvm/gems/ruby-2.1.1/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_tables.scss */
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+  background: #f9f9f9;
+}
+/* line 87, /Users/sonnyg/.rvm/gems/ruby-2.1.1/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_tables.scss */
+table thead tr th,
+table tfoot tr th,
+table tbody tr td,
+table tr td,
+table tfoot tr td {
+  display: table-cell;
+  line-height: 1.125rem;
+}
+
 /* line 1, /Users/sonnyg/github/c2g-beta/app/assets/stylesheets/foundation/base.scss */
 .row {
   margin: 1em auto;

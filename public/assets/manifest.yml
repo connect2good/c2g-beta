@@ -125,11 +125,11 @@ files:
     mtime: '2014-04-12T18:29:48-05:00'
     size: 44432
     digest: c022112dab89faebf109ad52beaf7beb
-  foundation/include-65c8e82138fb48f055c7cad804f79369.css:
+  foundation/include-88e8a2f03a7959fca51c4316d5748549.css:
     logical_path: foundation/include.css
-    mtime: '2014-04-12T18:30:10-05:00'
-    size: 160343
-    digest: 65c8e82138fb48f055c7cad804f79369
+    mtime: '2014-04-16T13:05:50-05:00'
+    size: 161853
+    digest: 88e8a2f03a7959fca51c4316d5748549
   vendor/modernizr-187cfe7298e2889987ca802dcefa74b8.js:
     logical_path: vendor/modernizr.js
     mtime: '2014-04-11T08:56:03-05:00'
@@ -241,7 +241,7 @@ assets:
   font-awesome/fonts/fontawesome-webfont.svg: font-awesome/fonts/fontawesome-webfont-86fa9390cc678cd6eca463e8d09c0a4d.svg
   font-awesome/fonts/fontawesome-webfont.ttf: font-awesome/fonts/fontawesome-webfont-e77e4457e71fbc69ff37e3097e8d1a19.ttf
   font-awesome/fonts/fontawesome-webfont.woff: font-awesome/fonts/fontawesome-webfont-c022112dab89faebf109ad52beaf7beb.woff
-  foundation/include.css: foundation/include-65c8e82138fb48f055c7cad804f79369.css
+  foundation/include.css: foundation/include-88e8a2f03a7959fca51c4316d5748549.css
   vendor/modernizr.js: vendor/modernizr-187cfe7298e2889987ca802dcefa74b8.js
   jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-b821ea4101f63be41ada40803de64f67.gif
   jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-4ed05a03044f3d06514e6757a4f69cf0.png
