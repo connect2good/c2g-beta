@@ -28,22 +28,22 @@
             .row
               .columns.small-12
                 = button_tag :query, class: "btn" do
-                  Search Needs
-          %span.bl-icon.bl-icon-close 
+                  SEARCH NEEDS
+          %span.bl-icon.bl-icon-close
         %section#bl-work-section
           .bl-box
             -# Sell --------------------------------------------------------------------
             %h2.bl-icon.bl-icon-sell.white Sell
           .bl-content
             = row :page_message do
-              %h2 Sell
-              %p Sell unwanted goods, and donate up to 100% of the proceeds to the non-profit of your choice
+              %h2.bright-white Sell
+              %p.bright-white Sell unwanted goods, and donate up to 100% of the proceeds to the non-profit of your choice
             = row do
               .columns.small-12
                 = link_to new_merchandise_path,
                   class: 'btn' do
                   Sell
-          %span.bl-icon.bl-icon-close 
+          %span.bl-icon.bl-icon-close.bright-white
         %section
           .bl-box
             -# Shop --------------------------------------------------------------------
@@ -68,11 +68,11 @@
                 %h3 Join our community!
             = row :user_type do
               .columns.small-6.text-center
-                %h3 Are you an organization?
+                %h3.padded Are you an organization?
                 =link_to new_organization_registration_path, class: "btn dark" do
                   Organization Sign Up
               .columns.small-6.text-center
-                %h3 Are you an individual?
+                %h3.padded Are you an individual?
                 =link_to new_individual_registration_path, class: "btn dark" do
                   Individual Sign Up
           %span.bl-icon.bl-icon-close 
