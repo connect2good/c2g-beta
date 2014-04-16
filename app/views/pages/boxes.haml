@@ -35,8 +35,9 @@
             -# Sell --------------------------------------------------------------------
             %h2.bl-icon.bl-icon-sell.white Sell
           .bl-content
-            %h2 Sell
-            %p Sell unwanted goods, and donate up to 100% of the proceeds to the non-profit of your choice
+            = row :page_message do
+              %h2 Sell
+              %p Sell unwanted goods, and donate up to 100% of the proceeds to the non-profit of your choice
             = row do
               .columns.small-12
                 = link_to new_merchandise_path,
