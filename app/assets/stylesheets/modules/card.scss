@@ -11,7 +11,12 @@
 }
 
 .card p {
-font-size: medium;
+  font-size: larger;
+  padding-bottom: 1em;
+}
+
+.card img {
+  padding-bottom: 1em;
 }
 
 .card:hover {
