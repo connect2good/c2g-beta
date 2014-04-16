@@ -10,6 +10,7 @@ class IndividualsController < ApplicationController
 
     # TODO: determine if there's a better way
     @view = @_env['PATH_INFO'].split(/\//)[-1]
+    @view = 'sale_items' if @view =~ /\d+/
 
     case @view
       when 'sale_items'
