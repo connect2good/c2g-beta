@@ -1,6 +1,7 @@
 =row :card do
   %h3== #{@merchandise.title} #{number_to_currency(@merchandise.price)}
   %p= @merchandise.description
+  %p= Organization.find(@merchandise.organization_id).name
   =row :images do
     =link_to @merchandise.pic1.url(:full) do
       =image_tag @merchandise.pic1.url(:medium)

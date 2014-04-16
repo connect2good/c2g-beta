@@ -11,7 +11,8 @@ C2g::Application.routes.draw do
   devise_for :organizations
   devise_for :individuals
 
-  root 'pages#home'
+  # root 'pages#home'
+  root 'pages#boxes'
 
   resources :merchandises do
     resources :purchases

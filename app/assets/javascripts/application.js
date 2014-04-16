@@ -14,6 +14,7 @@
 //= require jquery.ui.all
 //= require jquery_ujs
 //= require foundation
+//= require boxes
 // before, this had a require Chart, but it isn't present and breaks viewing the application
 
 $(document).foundation();

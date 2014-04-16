@@ -28,6 +28,13 @@
             Sell
             %icon{ class: 'fa fa-money' }
 
+    .row
+      .columns.small-12
+        = link_to needs_path, class: "btn" do
+          Search Needs
+        = link_to needs_path do
+          = button_tag :view_needs, class: "btn" do
+            View All Needs
 
       .columns.small-6.text-center
         %p Shop our marketplace. A portion of every purchase is donated to local nonprofits!
