@@ -68,9 +68,9 @@ ActiveRecord::Schema.define(version: 20140415153244) do
     t.string   "pic1"
     t.string   "pic2"
     t.string   "pic3"
-    t.boolean  "sold"
     t.float    "price"
     t.integer  "donation_percent"
+    t.boolean  "sold"
   end
 
   create_table "needs", force: true do |t|
