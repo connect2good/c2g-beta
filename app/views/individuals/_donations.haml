@@ -1,0 +1,15 @@
+.row
+  .columns.large-12
+    %h3 Donations
+    %table
+      %thead
+        %tr
+          %th need
+          %th your description
+          %th beneficiary
+      %tbody
+        - @donations.each do |donation|
+          %tr
+            %td= link_to donation.need.title, need_path(donation.need)
+            %td= link_to donation.description, need_path(donation.need)
+            %td= link_to donation.need.organization.name, organization_path(donation.need.organization)

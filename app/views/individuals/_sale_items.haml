@@ -1,0 +1,15 @@
+.row
+  .columns.large-12
+    %h3 Sale Items
+    %table
+      %thead
+        %tr
+          %th title
+          %th description
+          %th beneficiary
+      %tbody
+        - @sale_items.each do |sale_item|
+          %tr
+            %td= link_to sale_item.title, merchandise_path(sale_item)
+            %td= link_to sale_item.description, merchandise_path(sale_item)
+            %td= link_to sale_item.beneficiary.name, organization_path(sale_item.beneficiary)

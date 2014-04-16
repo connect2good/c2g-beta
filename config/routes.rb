@@ -1,11 +1,12 @@
 C2g::Application.routes.draw do
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
+
   get "inquiries/new"
   get "inquiries/create"
   get "purchases/index"
   get "purchases/new"
   get "purchases/create"
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
 
   devise_for :organizations
   devise_for :individuals
@@ -23,9 +24,32 @@ C2g::Application.routes.draw do
   end
 
   resources :individuals
+
+  get '/individuals/:id/sale_items',
+    to: 'individuals#show',
+    as: :individuals_sale_items
+
+  get '/individuals/:id/donations',
+    to: 'individuals#show',
+    as: :individuals_purchases
+
+  get '/individuals/:id/purchases',
+    to: 'individuals#show',
+    as: :individuals_donations
+
   resources :donations
   resources :needs
+  
   resources :organizations
+
+  get '/organizations/:id/needs',
+    to: 'organizations#show',
+    as: :organizations_needs
+
+  get '/organizations/:id/benefits',
+    to: 'organizations#show',
+    as: :organizations_benefits
+
   resources :pages
 
   get "join", to: "pages#join"
@@ -34,30 +58,5 @@ C2g::Application.routes.draw do
   namespace :admin do
     resources :individuals
   end
-
-  # get "merchandise/search"
-  # get "merchandise/index"
-  # get "merchandise/sell"
-  # get "merchandise/buy"
-  # get "merchandise/new"
-  # get "merchandise/edit"
-  # get "merchandise/destroy"
-  # get "nonprofit/new"
-  # get "needs/index"
-  # get "needs/donate"
-  # get "needs/search"
-  # get "needs/new"
-  # get "needs/edit"
-  # get "needs/destroy"
-
-  # get "donations/new"
-  # get "contact_form/new"
-  # get "contact_form/create"
-
-
-
-  # resources :search_suggestions
-
-
 
 end

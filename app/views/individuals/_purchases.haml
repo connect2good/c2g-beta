@@ -1,0 +1,17 @@
+.row
+  .columns.large-12
+    %h3 Purchases
+    %table
+      %thead
+        %tr
+          %th title
+          %th description
+          %th seller
+          %th sold
+      %tbody
+        - @purchases.each do |purchase|
+          %tr
+            %td= purchase.sale_item.title
+            %td= purchase.sale_item.description
+            %td= purchase.sale_item.seller.name
+            %td= purchase.sale_item.sold

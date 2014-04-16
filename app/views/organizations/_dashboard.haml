@@ -1,0 +1,12 @@
+- content_for :sidebar do
+  %p Picture
+  %p= @organization.name
+  %p= @organization.email
+  %p
+    = link_to 'Needs', organizations_needs_path,
+      class: 'btn'
+  %p
+    = link_to 'Benefits', organizations_path,
+      class: 'btn'
+
+= dashboard_content(@view)
