@@ -10,12 +10,13 @@ class OrganizationsController < ApplicationController
 
     # TODO: determine if there's a better way
     @view = @_env['PATH_INFO'].split(/\//)[-1]
+    @view = 'needs' if @view =~ /\d+/
 
     case @view
       when 'needs'
         @needs = @organization.needs
       when 'benefits'
-        @donations  = @organization.benefirts
+        @benefits = @organization.benefits
       else
         # default   
       end

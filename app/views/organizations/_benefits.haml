@@ -1,0 +1,13 @@
+.row
+  .columns.large-12
+    %h3 Benefits
+    %table
+      %thead
+        %tr
+          %th Sale Item
+          %th Description
+      %tbody
+        - @benefits.each do |benefit|
+          %tr
+            %td= link_to benefit.title, merchandise_path(benefit)
+            %td= link_to benefit.description, merchandise_path(benefit)

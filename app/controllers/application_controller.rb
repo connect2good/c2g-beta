@@ -5,23 +5,23 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def after_sign_in_path_for(resource)
+  # def after_sign_in_path_for(resource)
 
-    # if current_individual
+  #   # if current_individual
 
-      if current_individual.try(:admin?)
-        admin_individual_path(current_individual)
-      elsif current_individual
-        individual_path(current_individual)
-      else
-        organization_path(current_organizaton)
-      end
+  #     # if current_individual.try(:admin?)
+  #     #   admin_individual_path(current_individual)
+  #     # elsif current_individual
+  #     #   individual_path(current_individual)
+  #     # else
+  #     #   organization_path(current_organizaton)
+  #     # end
 
-    # else current_organizaton
-    #   organization_path(current_organization)
-    # end
+  #   # else current_organizaton
+  #   #   organization_path(current_organization)
+  #   # end
 
-  end
+  # end
 
 protected
 
