@@ -10,6 +10,6 @@
       %tbody
         - @sale_items.each do |sale_item|
           %tr
-            %td= sale_item.title
-            %td= sale_item.description
-            %td= sale_item.beneficiary.name
+            %td= link_to sale_item.title, merchandise_path(sale_item)
+            %td= link_to sale_item.description, merchandise_path(sale_item)
+            %td= link_to sale_item.beneficiary.name, organization_path(sale_item.beneficiary)
