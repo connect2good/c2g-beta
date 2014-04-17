@@ -55,24 +55,24 @@ Donation.blueprint do
   closed_at do
     (1 + rand(3)).to_i.days.ago
   end
-  pic1 do
-    Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-      'image/jpg'
-      )
-  end
-  pic2 do
-    Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-      'image/jpg'
-      )
-  end
-  pic3 do
-    Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-      'image/jpg'
-      )
-  end
+  # pic1 do
+  #   Rack::Test::UploadedFile.new(
+  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+  #     'image/jpg'
+  #     )
+  # end
+  # pic2 do
+  #   Rack::Test::UploadedFile.new(
+  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+  #     'image/jpg'
+  #     )
+  # end
+  # pic3 do
+  #   Rack::Test::UploadedFile.new(
+  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+  #     'image/jpg'
+  #     )
+  # end
 end
 
 Need.blueprint do
@@ -85,22 +85,22 @@ Merchandise.blueprint do
   description { Faker::Company::bs }
   price       { 1 + rand(100).to_i }
   agree       { true }
-  pic1 do
-    Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-      'image/jpg'
-      )
-  end
-  pic2 do
-    Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-      'image/jpg'
-      )
-  end
-  pic3 do
-    Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
-      'image/jpg'
-      )
-  end
+  # pic1 do
+  #   Rack::Test::UploadedFile.new(
+  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+  #     'image/jpg'
+  #     )
+  # end
+  # pic2 do
+  #   Rack::Test::UploadedFile.new(
+  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+  #     'image/jpg'
+  #     )
+  # end
+  # pic3 do
+  #   Rack::Test::UploadedFile.new(
+  #     Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+  #     'image/jpg'
+  #     )
+  # end
 end

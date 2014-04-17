@@ -115,14 +115,6 @@ Merchandise.make!(
     Rails.root.join('spec', 'support', 'mansion.jpg'),
     'image/jpg'
     ),
-  pic2:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'mansion.jpg'),
-    'image/jpg'
-    ),
-  pic3:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'mansion.jpg'),
-    'image/jpg'
-    ),
   price: 14.5e6,
   donation_percent: 20,
   individual_id: person.id,
@@ -138,14 +130,14 @@ Merchandise.make!(
     Rails.root.join('spec', 'support', 'yacht.jpg'),
     'image/jpg'
     ),
-  pic2:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'yacht.jpg'),
-    'image/jpg'
-    ),
-  pic3:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'yacht.jpg'),
-    'image/jpg'
-    ),
+  # pic2:  Rack::Test::UploadedFile.new(
+  #   Rails.root.join('spec', 'support', 'yacht.jpg'),
+  #   'image/jpg'
+  #   ),
+  # pic3:  Rack::Test::UploadedFile.new(
+  #   Rails.root.join('spec', 'support', 'yacht.jpg'),
+  #   'image/jpg'
+  #   ),
   price: 3.2e6,
   donation_percent: 10,
   individual_id: person.id,
@@ -158,17 +150,17 @@ Merchandise.make!(
   title: 'Shiny, Happy Fridge',
   description: '2.5 cubic meters of coolness. Includes filtered water dispenser and icemaker. Smudge resistant finish. Great for a household with young children',
   pic1:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'fridge.jpg'),
+    Rails.root.join('spec', 'support', 'fridge1.jpeg'),
     'image/jpg'
     ),
   pic2:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'fridge.jpg'),
+    Rails.root.join('spec', 'support', 'fridge2.jpeg'),
     'image/jpg'
     ),
-  pic3:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'fridge.jpg'),
-    'image/jpg'
-    ),
+  # pic3:  Rack::Test::UploadedFile.new(
+  #   Rails.root.join('spec', 'support', 'fridge.jpg'),
+  #   'image/jpg'
+  #   ),
   price: 500.00,
   donation_percent: 50,
   individual_id: person.id,
@@ -185,14 +177,14 @@ Merchandise.make!(
     Rails.root.join('spec', 'support', 'lawnmowver.jpg'),
     'image/jpg'
     ),
-  pic2:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'lawnmowver.jpg'),
-    'image/jpg'
-    ),
-  pic3:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'lawnmowver.jpg'),
-    'image/jpg'
-    ),
+  # pic2:  Rack::Test::UploadedFile.new(
+  #   Rails.root.join('spec', 'support', 'lawnmowver.jpg'),
+  #   'image/jpg'
+  #   ),
+  # pic3:  Rack::Test::UploadedFile.new(
+  #   Rails.root.join('spec', 'support', 'lawnmowver.jpg'),
+  #   'image/jpg'
+  #   ),
   price: 1250.00,
   donation_percent: 25,
   individual_id: person.id,
@@ -202,18 +194,18 @@ Merchandise.make!(
 # batmobile
 person = Individual.make!
 Merchandise.make!(
-  title: 'The Batmobile',
+  title: 'Batmobile',
   description: 'TV\'s original Batmobile. Owner has fallen on hard times. A really, really good deal. Great for impressing your dates.',
   pic1:  Rack::Test::UploadedFile.new(
     Rails.root.join('spec', 'support', 'batmobile.jpg'),
     'image/jpg'
     ),
   pic2:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'batmobile.jpg'),
+    Rails.root.join('spec', 'support', 'batmobile2.jpeg'),
     'image/jpg'
     ),
   pic3:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'batmobile.jpg'),
+    Rails.root.join('spec', 'support', 'batmobile3.jpeg'),
     'image/jpg'
     ),
   price: 150000.00,
@@ -228,14 +220,6 @@ Merchandise.make!(
   title: 'Stylish Couch',
   description: 'Beutiful micro-fiber sitting system. Stain resistant and comfy. Great for Sunday afternoon coding.',
   pic1:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'couch.jpg'),
-    'image/jpg'
-    ),
-  pic2:  Rack::Test::UploadedFile.new(
-    Rails.root.join('spec', 'support', 'couch.jpg'),
-    'image/jpg'
-    ),
-  pic3:  Rack::Test::UploadedFile.new(
     Rails.root.join('spec', 'support', 'couch.jpg'),
     'image/jpg'
     ),
@@ -267,7 +251,7 @@ devs_not_admin.each do |dev|
       purchase.buyer = buyer
 
       purchase.save! validate: false
-    
+
   end
 end
 
