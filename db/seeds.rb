@@ -69,14 +69,6 @@ organizations.each do |organization|
   end
 end
 
-# Organization.make!(N_ORGANIZATIONS).each do |organization|
-#   Need.make(N_NEEDS_PER_ORGANIZATION).each do |need|
-#     need.organization_id = organization.id
-#     need.save! validate: false
-#   end
-# end
-
-
 puts 'Creating Devs(Admin)...'
 # Make Dev Admins
 devs_admins.each do |admin|
