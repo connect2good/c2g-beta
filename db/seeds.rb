@@ -96,22 +96,155 @@ devs_not_admin.each do |dev|
   individual.save! validate: false
 
   # Give Dev !Admins some merchandise
-  Merchandise.make(N_MERCHANDISE_PER_INDIVIDUAL).each do |merchandise|
-    merchandise.individual_id   = individual.id
-    merchandise.organization_id = Organization.all.sample.id
-    merchandise.save! validate: false
-  end
+  # Merchandise.make(N_MERCHANDISE_PER_INDIVIDUAL).each do |merchandise|
+  #   merchandise.individual_id   = individual.id
+  #   merchandise.organization_id = Organization.all.sample.id
+  #   merchandise.save! validate: false
+  # end
 end
 
 puts 'Creating Individuals with Merchandise...'
 # Create Individuals with sale_itmes
-Individual.make!(N_INDIVIDUALS).each do |individual|
-  Merchandise.make(N_MERCHANDISE_PER_INDIVIDUAL).each do |merchandise|
-    merchandise.individual_id = individual.id
-    merchandise.organization_id = Organization.all.sample.id
-    merchandise.save! validate: false
-  end
-end
+
+# mansion
+person = Individual.make!
+Merchandise.make!(
+  title: 'Cozy Hamptons Cottage',
+  description: '12,000 square feet with 14 bedrooms, 8 full baths on 10 acres. Beautiful view. Priced to sell',
+  pic1:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'mansion.jpg'),
+    'image/jpg'
+    ),
+  pic2:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'mansion.jpg'),
+    'image/jpg'
+    ),
+  pic3:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'mansion.jpg'),
+    'image/jpg'
+    ),
+  price: 14.5e6,
+  donation_percent: 20,
+  individual_id: person.id,
+  organization_id: Organization.all.sample.id
+)
+
+# yacht
+person = Individual.make!
+Merchandise.make!(
+  title: 'Weekend Yacht',
+  description: '150 foot yacht complete with 3 state rooms, a galley, and home theater system with B&W speakers',
+  pic1:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'yacht.jpg'),
+    'image/jpg'
+    ),
+  pic2:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'yacht.jpg'),
+    'image/jpg'
+    ),
+  pic3:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'yacht.jpg'),
+    'image/jpg'
+    ),
+  price: 3.2e6,
+  donation_percent: 10,
+  individual_id: person.id,
+  organization_id: Organization.all.sample.id
+)
+
+# fridge
+person = Individual.make!
+Merchandise.make!(
+  title: 'Shiny, Happy Fridge',
+  description: '2.5 cubic meters of coolness. Includes filtered water dispenser and icemaker. Smudge resistant finish. Great for a household with young children',
+  pic1:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'fridge.jpg'),
+    'image/jpg'
+    ),
+  pic2:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'fridge.jpg'),
+    'image/jpg'
+    ),
+  pic3:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'fridge.jpg'),
+    'image/jpg'
+    ),
+  price: 500.00,
+  donation_percent: 50,
+  individual_id: person.id,
+  organization_id: Organization.all.sample.id
+)
+
+
+# lawnmower
+person = Individual.make!
+Merchandise.make!(
+  title: 'Riding Lawnmower',
+  description: '50 hp of green and yellow awesome sauce. Ride the Deer with a beer. Bring the fun back to mowing your lawn',
+  pic1:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'lawnmowver.jpg'),
+    'image/jpg'
+    ),
+  pic2:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'lawnmowver.jpg'),
+    'image/jpg'
+    ),
+  pic3:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'lawnmowver.jpg'),
+    'image/jpg'
+    ),
+  price: 1250.00,
+  donation_percent: 25,
+  individual_id: person.id,
+  organization_id: Organization.all.sample.id
+)
+
+# batmobile
+person = Individual.make!
+Merchandise.make!(
+  title: 'The Batmobile',
+  description: 'TV\'s original Batmobile. Owner has fallen on hard times. A really, really good deal. Great for impressing your dates.',
+  pic1:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'batmobile.jpg'),
+    'image/jpg'
+    ),
+  pic2:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'batmobile.jpg'),
+    'image/jpg'
+    ),
+  pic3:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'batmobile.jpg'),
+    'image/jpg'
+    ),
+  price: 150000.00,
+  donation_percent: 5,
+  individual_id: person.id,
+  organization_id: Organization.all.sample.id
+)
+
+# couch
+person = Individual.make!
+Merchandise.make!(
+  title: 'Stylish Couch',
+  description: 'Beutiful micro-fiber sitting system. Stain resistant and comfy. Great for Sunday afternoon coding.',
+  pic1:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'couch.jpg'),
+    'image/jpg'
+    ),
+  pic2:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'couch.jpg'),
+    'image/jpg'
+    ),
+  pic3:  Rack::Test::UploadedFile.new(
+    Rails.root.join('spec', 'support', 'couch.jpg'),
+    'image/jpg'
+    ),
+  price: 350.00,
+  donation_percent: 15,
+  individual_id: person.id,
+  organization_id: Organization.all.sample.id
+)
+
 
 puts 'Creating Market Transactions for Devs(!Admin)...'
 # Market Transactions
