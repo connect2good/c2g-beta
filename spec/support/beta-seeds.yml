@@ -1,0 +1,163 @@
+---
+- name: !!str Animal Trustees of Austin
+  email: !!str jill@animaltrustees.org
+  about: !!str Animal Trustees of Austin serves the animals of our community by providing affordable, humane treatment, with compassion and respect for all. We are committed to ending overpopulation by making spay/neuter surgery for dogs and cats affordable and accessible to the general public, and wellness care an option for all pet owners regardless of income.
+  website: !!str www.animaltrustees.org
+  needs:
+  - !!str towels (bath-sized)
+  - !!str trash bags (13 gallon kitchen-sized)
+  - !!str trash bags (55 gallon)
+  - !!str Bleach
+  - !!str Coin envelopes
+  - !!str Dog collar
+  - !!str leash
+  - !!str Breakaway cat collars
+  - !!str cat crate
+  - !!str dog crate
+  - !!str Hydrogen Peroxide
+  - !!str Isopropyl Alcohol (70%)
+  - !!str Kong Toy
+  - !!str Liquid Laundry Detergent
+  - !!str Paper Towels
+  - !!str Postage Stamp
+  - !!str Powdered puppy formula
+  - !!str Powdered kitten formula
+  - !!str Printer paper
+  - !!str Scoopable kitty litter
+  - !!str Toilet paper
+  - !!str Ziploc style sandwich bags
+- name: !!str Austin Humane Society
+  email: !!str development@austinhumanesociety.org
+  about: !!str The Austin Humane Society (AHS) offers comprehensive, humane, life-saving animal services, transforming the lives of animals and those who love them. Because we believe homeless animals deserve a chance to thrive in a loving environment, we offer innovative, nationally recognized programs that save the lives of thousands of dogs and cats each year. AHS’ approach to addressing animal homelessness encompasses both finding animals homes through adoption as well as preventing future homelessness through spay/neuter programs.
+  website: !!str www.austinhumanesociety.org
+  needs:
+  - !!str Bark n' Purr Giftcard
+  - !!str Tomlinson's Giftcard
+  - !!str PetsMart Giftcard
+  - !!str PetCo Giftcard
+  - !!str Target Giftcard
+  - !!str Home Depot Giftcard
+  - !!str Sam's Club Giftcard
+  - !!str Paper Towels
+  - !!str Kitten Milk Replacement
+  - !!str Puppy Milk Replacement
+  - !!str Peanut Butter (creamy, sealed non-organic and unexpired)
+  - !!str Cans of Easy Cheese
+  - !!str Kitten Bottle Sets
+  - !!str Stainless Steel Bowls (non-spill)
+  - !!str Non-Clumping Cat Litter
+  - !!str Bedding
+  - !!str towels
+  - !!str blankets without stuffing
+  - !!str Karunda beds and supplies
+  - !!str carriers (all sizes)
+  - !!str Crates (all sizes)
+  - !!str Small Electric Heating Pads without timers
+  - !!str Premier collars
+  - !!str EZ Walks
+  - !!str Dog Treats
+  - !!str Cat treats
+  - !!str Greenies Pill Pockets
+  - !!str Hard Rubber Activity Dog Toys
+  - !!str Cat Toys
+  - !!str Rawhide flips
+  - !!str Rawhide chips
+  - !!str Can openers
+  - !!str cat nail trimmers (scissor type)
+  - !!str dog nail trimmers (scissor type)
+  - !!str digital thermometers
+  - !!str Neosporin triple antibiotic ointment tubes
+  - !!str rubbing alcohol
+  - !!str hydrogen peroxide
+  - !!str unopened distilled water
+  - !!str closable plastic sandwich bags
+  - !!str brooms
+  - !!str dust pans
+  - !!str hand sanitizer
+  - !!str rubber gloves
+  - !!str sponges
+  - !!str smart phones
+  - !!str tablets
+  - !!str iPads
+- name: !!str Austin Siamese Rescue
+  email: !!str loveasiamese@yahoo.com
+  about: !!str Founded on the belief that all life should be valued and treated with dignity and respect, Austin Siamese Rescue, Inc. has a long-term commitment to responsible rescue, rehabilitation and the re-homing of Siamese cats and their non-Siamese companions in the Central Texas area. All of the cats fostered in Austin are cared for in private homes by individuals who dedicate their spare time to this effort. Our cats come from a variety of backgrounds. Some faced death at the shelter, while others came from abusive and neglectful households. Still others were treasured companions of guardians who could no longer care for them. What they all have in common is a need for a forever home, where they can live their lives as the happy, pampered cats they all deserve to be. We're looking for the perfect inside home for them
+  website: !!str www.austinsiameserescue.org
+  needs:
+  - !!str Cat trees
+  - !!str scratching posts
+  - !!str Iams Hairball
+  - !!str Costco cat food
+  - !!str Purina One Sensitive Stomach
+  - !!str Wellness Indoor Health and Wellness CORE
+  - !!str Taste of the Wild
+  - !!str show kennels
+  - !!str Circle Beds
+  - !!str towels
+  - !!str Advantage
+  - !!str Frontline
+  - !!str Revolution
+  - !!str Gas cards
+  - !!str pine pelletts
+  - !!str Tidy Cat Multi Cat Scoopable
+  - !!str Sweat Scoop
+  - !!str Petsmart Gift Cards
+  - !!str Litter Locker 6-Pack Genie Refill Cartridge
+  - !!str Litter Genie Cat Litter Disposal Odor Free Pail System
+  - !!str Bayer Contour Blood Glucose 100 Test Strips
+  - !!str Drontal for Cats 50ct tabs
+  - !!str Tradewinds Feline Tapeworm Tabs 3-23mg Tabs
+  - !!str Little Citty Dogs CHICKEN FLAVORED Praziquantel Tapeworm Wormer Capsules for Cats
+  - !!str Royal Canine Canned Cat Food Babycat Formula
+  - !!str Nylabone Cozytime Pet Home and Carrier
+- name: !!str Emancipet
+  email: !!str jill.lally@emancipet.org
+  about: !!str Emancipet is on a mission to make spay/neuter and preventive veterinary care affordable and accessible to all pet guardians. We envision a future where all pets are happy, healthy, and living with families whose lives they enrich through the human-animal bond. We provide free and low-cost spay/neuter surgeries and preventive veterinary wellness through our stationary clinic on Levander Loop and via our two mobile spay/neuter clinics. Our mobile clinics bring low-cost sterilization services to Bastrop, Caldwell, Hays, Travis and Williamson Counties Monday – Wednesday, and offer free, first-come first-served surgeries in targeted Austin neighborhoods Thursday – Saturday. Emancipet sterilizes over 18,500 pets annually, and provides preventive veterinary wellness services to over 18,000.
+  website: !!str www.emancipet.org
+  needs:
+  - !!str Car
+- name: !!str PAWS OF AUSTIN
+  email: !!str dogs@pawsofaustin.org
+  about: !!str PAWS' mission is to prevent cruelty to all animals by promoting humane standards through education and example, to provide care and shelter for homeless animals, aid in the reduction of domestic animal overpopulation, and aid in the enforcement of laws, including the investigation of animal cruelty and abuse.
+  website: !!str www.pawsofaustin.org
+  needs:
+  - !!str pet food
+  - !!str cars
+  - !!str trucks
+  - !!str boats
+  - !!str trailer
+  - !!str pet supplies
+  - !!str pet toys
+  - !!str bedding
+  - !!str towels
+  - !!str crates
+  - !!str blankets
+  - !!str kennels
+- name: !!str PREVENT A LITTER (PALS) OF CENTRAL TEXAS
+  email: !!str PAL@PreventALitter.com
+  about: !!str The mission of PALS is to end pet euthanasia and pet homelessness in Central Texas through our programs of spay/neuter, humane education, TrapNeuterReturn of feral cats, and Pet Food Pantry. PALS is an all volunteer organization. We have our own Cat Spay/Neuter clinic held once or twice monthly. Our TNR rescues kittens and tame cats from feral colonies, fosters them and adopts them to loving homes. Our services are for the underprivileged in our community. Our mission will be complete when the shelters are empty and every pet has a loving forever home.
+  website: !!str www.preventalitter.com
+  needs:
+  - !!str cars
+  - !!str trucks
+  - !!str RVs
+  - !!str PowerPoint Projector
+  - !!str Bark n' Purr Giftcard
+  - !!str Tomlinson's Giftcard
+  - !!str PetsMart Giftcard
+  - !!str PetCo Giftcard
+  - !!str Target Giftcard
+  - !!str Walmart Giftcard
+  - !!str copy paper
+  - !!str stamps
+  - !!str regular envelopes
+  - !!str business envelopes
+  - !!str Paper towels
+  - !!str Laundry detergent
+  - !!str dry cat food
+  - !!str canned cat food
+  - !!str Kitty litter
+  - !!str Dog food
+  - !!str Pet carriers (cat size)
+  - !!str beverage coolers
+  - !!str Medical supplies (for our surgical clinic)

@@ -52,18 +52,16 @@ organizations = YAML.load_file(
 )
 
 organizations.each do |organization|
-  # ap organization
   org = Organization.make!(
-    name:    organization['name'],
-    email:   organization['email'] || Faker::Internet::email,
-    about:   organization['about'],
+    name:    organization['name']
+    email:   organization['email']
+    about:   organization['about']
     website: organization['website']
   )
-  ap organization['needs']
   organization['needs'].each do |need|
     Need.make!(
-      title: need.truncate(20, separator: ' '),
-      description: need,
+      title: need.truncate(20, separator: ' ')
+      description: need
       organization_id: org.id
     )
   end
