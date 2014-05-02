@@ -25,6 +25,7 @@ gem 'mail_form'
 gem 'unf'
 gem 'awesome_print'
 gem 'money-rails'
+gem 'balanced'
 
 
 group :production, :staging do
