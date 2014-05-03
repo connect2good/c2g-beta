@@ -20,5 +20,25 @@ class Purchase < ActiveRecord::Base
     @errors = []
   end
 
+  def create_card
+  begin
+    @card = Balanced::Card.new(@credit_card_hash).save 
+  rescue
+    @errors << 'Your credit card is invalid'
+  end
+end
 
+def find_or_create_buyer
+  begin
+    buyer = Balanced::Account.find_by_email(@email)
+    if buyer.present?
+      @buyer = buyer
+    else
+      @buyer = Balanced::Marketplace.my_marketplace.create_buyer(@email, @card.uri)
+    end
+  rescue
+    @errors << 'Your account is invalid'
+  end
+  
+end
 end
