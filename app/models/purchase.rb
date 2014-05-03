@@ -48,4 +48,12 @@ def debit_buyer
     @errors << 'Your credit card could not be charged'
   end
 end
+
+def credit_owner
+  begin
+    Balanced::Marketplace.my_marketplace.owner_account.credit(amount)
+  rescue
+    @errors << 'Your credit card payment did not go through.'
+  end
+end
 end
