@@ -39,6 +39,13 @@ def find_or_create_buyer
   rescue
     @errors << 'Your account is invalid'
   end
-  
+end
+
+def debit_buyer
+  begin
+    payment = @buyer.debit(@amount, "Everkitten.com")
+  rescue
+    @errors << 'Your credit card could not be charged'
+  end
 end
 end
