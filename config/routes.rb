@@ -15,7 +15,7 @@ C2g::Application.routes.draw do
   root 'pages#boxes'
 
   resources :merchandises do
-    resources :purchases
+    resources :purchases, only: [ :new, :create ]
     resources :inquiries
   end
 
